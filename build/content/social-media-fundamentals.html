@@ -1,0 +1,48 @@
+<div class="page-eyebrow"><span class="page-eyebrow__dot" style="background:var(--social)"></span>Social Media</div>
+<h1>Social Media Fundamentals</h1>
+<p class="lede">Social media marketing builds brand presence, community, and demand through organic posting and engagement across platforms — each with its own algorithm, culture, and content expectations.</p>
+
+<h2>Platform-by-platform snapshot</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Platform</th><th>Core audience</th><th>Best content style</th></tr></thead>
+<tbody>
+<tr><td>Instagram</td><td>Broad, visual-first, 18-40</td><td>Reels, carousels, aesthetic photography</td></tr>
+<tr><td>TikTok</td><td>Gen Z-leaning, fast-growing all ages</td><td>Native, unpolished, entertainment-first short video</td></tr>
+<tr><td>LinkedIn</td><td>Professionals, B2B decision-makers</td><td>Personal insight posts, thought leadership, data</td></tr>
+<tr><td>X (Twitter)</td><td>News, tech, real-time commentary</td><td>Short-form takes, threads, timely replies</td></tr>
+<tr><td>Facebook</td><td>Older demographics, community groups</td><td>Groups, events, longer-form updates</td></tr>
+<tr><td>Pinterest</td><td>High-intent visual discovery, home/lifestyle/DIY</td><td>Vertical Pins linking to blog/product content</td></tr>
+</tbody>
+</table></div>
+
+<h2>How social algorithms generally decide reach</h2>
+<p>Every platform differs in specifics, but most weigh a common set of signals:</p>
+<ul>
+<li><strong>Early engagement velocity</strong> — how quickly the first viewers like/comment/share/watch fully</li>
+<li><strong>Dwell time / watch time</strong> — how long people actually look at or watch a post</li>
+<li><strong>Relationship signals</strong> — whether someone regularly interacts with your account already</li>
+<li><strong>Content format preference</strong> — platforms actively promote formats they're pushing (e.g., Reels, Shorts)</li>
+<li><strong>Negative signals</strong> — "see less," reports, or quick scroll-past all suppress future reach</li>
+</ul>
+
+<h2>Organic vs. paid social</h2>
+<p>Organic reach on most platforms has declined significantly as algorithms prioritize keeping users on-platform and reserve premium placement for advertisers. A modern strategy typically treats organic as the community/brand-voice layer and pairs it with paid boosting of top-performing organic content ("dark posts" or "boosted posts") for actual reach at scale.</p>
+
+<h2>Engagement rate — the metric that matters more than followers</h2>
+<div class="code-block">
+<div class="code-block__bar"><span>engagement-rate.js</span><button class="copy-btn">Copy</button></div>
+<pre><code>function engagementRate(likes, comments, shares, followers) {
+  const interactions = likes + comments + shares;
+  return ((interactions / followers) * 100).toFixed(2) + "%";
+}
+
+engagementRate(420, 38, 12, 10000); // "4.70%"
+</code></pre>
+</div>
+<p>A smaller, highly-engaged audience routinely outperforms a large, passive one for actual business outcomes — engagement rate correlates with algorithmic reach and with real audience trust.</p>
+
+<div class="callout callout--interview">
+<div class="callout__title">🎯 Interview Corner</div>
+<p><strong>Q: A brand has 100K followers but almost no engagement. What would you investigate?</strong><br>
+A: Check follower quality (bought/bot followers, irrelevant audience from a viral but off-brand moment), content-audience mismatch, posting consistency, and whether CTAs actually invite interaction rather than just broadcasting. Also check whether engagement is being measured against total followers vs. actual reach — reach is usually a fraction of follower count.</p>
+</div>

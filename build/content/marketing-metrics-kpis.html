@@ -1,0 +1,69 @@
+<div class="page-eyebrow"><span class="page-eyebrow__dot" style="background:var(--analytics)"></span>Analytics & Data</div>
+<h1>Marketing Metrics & Formulas</h1>
+<p class="lede">The complete reference sheet of formulas every digital marketer is expected to know cold — these come up in almost every interview and every performance report.</p>
+
+<div class="kpi-row">
+  <div class="kpi"><div class="kpi__label">CAC</div><div class="kpi__value">Spend ÷ New Customers</div></div>
+  <div class="kpi"><div class="kpi__label">LTV</div><div class="kpi__value">AOV × Purchase Freq × Lifespan</div></div>
+  <div class="kpi"><div class="kpi__label">ROAS</div><div class="kpi__value">Revenue ÷ Ad Spend</div></div>
+  <div class="kpi"><div class="kpi__label">CR</div><div class="kpi__value">Conversions ÷ Visitors</div></div>
+</div>
+
+<h2>Acquisition & spend metrics</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Metric</th><th>Formula</th><th>Interpretation</th></tr></thead>
+<tbody>
+<tr><td>CPC — Cost Per Click</td><td>Total Spend ÷ Clicks</td><td>What one click costs</td></tr>
+<tr><td>CPM — Cost Per Mille</td><td>(Total Spend ÷ Impressions) × 1000</td><td>Cost per 1,000 impressions — awareness efficiency</td></tr>
+<tr><td>CPA — Cost Per Acquisition</td><td>Total Spend ÷ Conversions</td><td>What one conversion (lead/sale) costs</td></tr>
+<tr><td>CAC — Customer Acquisition Cost</td><td>Total Sales & Marketing Spend ÷ New Customers</td><td>Fully-loaded cost to win one customer</td></tr>
+</tbody>
+</table></div>
+
+<h2>Performance & value metrics</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Metric</th><th>Formula</th><th>Interpretation</th></tr></thead>
+<tbody>
+<tr><td>CTR — Click-Through Rate</td><td>Clicks ÷ Impressions × 100</td><td>Ad/content relevance & appeal</td></tr>
+<tr><td>CR — Conversion Rate</td><td>Conversions ÷ Total Visitors × 100</td><td>How well traffic turns into outcomes</td></tr>
+<tr><td>ROAS — Return on Ad Spend</td><td>Revenue ÷ Ad Spend</td><td>3.0 ROAS = $3 revenue per $1 spent</td></tr>
+<tr><td>ROI — Return on Investment</td><td>(Revenue − Cost) ÷ Cost × 100</td><td>Net profitability including all costs, not just ad spend</td></tr>
+<tr><td>AOV — Average Order Value</td><td>Total Revenue ÷ Number of Orders</td><td>How much a typical order is worth</td></tr>
+<tr><td>LTV / CLV — Customer Lifetime Value</td><td>AOV × Purchase Frequency × Customer Lifespan</td><td>Total value a customer generates over the relationship</td></tr>
+</tbody>
+</table></div>
+
+<h2>The metric that ties it all together: LTV:CAC ratio</h2>
+<div class="code-block">
+<div class="code-block__bar"><span>ltv-cac.js</span><button class="copy-btn">Copy</button></div>
+<pre><code>function ltvToCac(ltv, cac) {
+  const ratio = ltv / cac;
+  let verdict;
+  if (ratio < 1)      verdict = "Losing money on every customer";
+  else if (ratio < 3)  verdict = "Marginal — needs improvement";
+  else if (ratio <= 5) verdict = "Healthy, sustainable growth";
+  else                 verdict = "Possibly under-investing in growth";
+  return { ratio: ratio.toFixed(2), verdict };
+}
+
+ltvToCac(900, 250); // { ratio: '3.60', verdict: 'Healthy, sustainable growth' }
+</code></pre>
+</div>
+<p>A widely-cited rule of thumb is that a healthy SaaS/subscription business targets an LTV:CAC ratio of roughly <strong>3:1</strong> — high enough to be profitable and fund growth, but not so high that the company is likely under-investing in customer acquisition relative to available opportunity.</p>
+
+<h2>Engagement & retention metrics</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Metric</th><th>Formula</th></tr></thead>
+<tbody>
+<tr><td>Bounce Rate</td><td>Single-page sessions ÷ Total sessions × 100</td></tr>
+<tr><td>Churn Rate</td><td>Customers lost in period ÷ Customers at start of period × 100</td></tr>
+<tr><td>Retention Rate</td><td>100% − Churn Rate</td></tr>
+<tr><td>NPS (Net Promoter Score)</td><td>% Promoters (9–10 rating) − % Detractors (0–6 rating)</td></tr>
+</tbody>
+</table></div>
+
+<div class="callout callout--interview">
+<div class="callout__title">🎯 Interview Corner</div>
+<p><strong>Q: A campaign has an LTV:CAC ratio of 8:1. Is that good?</strong><br>
+A: On the surface it looks excellent — very profitable per customer. But an unusually high ratio is often a sign of under-spending: the company could likely spend more on acquisition (accepting a lower but still healthy ratio) and grow faster while remaining profitable. The "right" answer weighs available growth capital and market size, not just the raw number.</p>
+</div>

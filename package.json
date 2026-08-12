@@ -1,0 +1,10 @@
+{
+  "name": "digitalmarketing.ai",
+  "version": "1.0.0",
+  "description": "A free, open-source, practical digital marketing tutorial site — SEO, PPC, content, social, email, analytics, tools, projects and interview prep.",
+  "private": true,
+  "scripts": {
+    "build": "node build/build.js"
+  },
+  "license": "MIT"
+}

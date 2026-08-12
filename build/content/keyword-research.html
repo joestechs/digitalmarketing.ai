@@ -1,0 +1,68 @@
+<div class="page-eyebrow"><span class="page-eyebrow__dot" style="background:var(--seo)"></span>SEO</div>
+<h1>Keyword Research</h1>
+<p class="lede">Keyword research is the process of finding what your audience actually types into search engines, how often, and how hard it is to rank for — so you write content that meets real demand instead of guessing.</p>
+
+<h2>The core metrics</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Metric</th><th>What it means</th></tr></thead>
+<tbody>
+<tr><td><strong>Search Volume</strong></td><td>Average monthly searches for a keyword (often shown as a range, not exact)</td></tr>
+<tr><td><strong>Keyword Difficulty (KD)</strong></td><td>An estimate (0–100) of how hard it is to rank on page 1, based on competing sites' authority</td></tr>
+<tr><td><strong>CPC</strong></td><td>What advertisers pay per click on that keyword in Google Ads — a proxy for commercial value</td></tr>
+<tr><td><strong>SERP features</strong></td><td>Whether the results page shows a featured snippet, People Also Ask, video carousel, etc.</td></tr>
+</tbody>
+</table></div>
+
+<h2>Short-tail vs. long-tail keywords</h2>
+<ul>
+<li><strong>Short-tail</strong> ("shoes") — huge volume, extremely competitive, vague intent.</li>
+<li><strong>Long-tail</strong> ("best waterproof trail running shoes for wide feet") — lower volume individually, much easier to rank, higher conversion intent. Long-tail keywords, in aggregate, make up the majority of all search traffic.</li>
+</ul>
+
+<h2>A practical keyword research workflow</h2>
+<ol>
+<li><strong>Seed list</strong> — brainstorm 10–20 broad topics your product/persona cares about.</li>
+<li><strong>Expand</strong> — run each seed through a keyword tool (Ahrefs, Semrush, Google Keyword Planner, or the free Google Search Console + autocomplete) to surface hundreds of variations.</li>
+<li><strong>Mine competitors</strong> — check which keywords competitor pages already rank for ("content gap" reports).</li>
+<li><strong>Cluster by intent</strong> — group keywords that would realistically be satisfied by the same single page (avoid one-page-per-keyword; it causes internal competition, or "keyword cannibalization").</li>
+<li><strong>Prioritize</strong> — score each cluster by (Volume × Relevance) ÷ Difficulty to sequence your content calendar.</li>
+</ol>
+
+<div class="code-block">
+<div class="code-block__bar"><span>keyword-scoring.js</span><button class="copy-btn">Copy</button></div>
+<pre><code>// Simple keyword opportunity score you can compute in a spreadsheet or script
+function opportunityScore(keyword) {
+  const { volume, difficulty, relevance } = keyword; // relevance: 1-10 you assign manually
+  const difficultyFactor = Math.max(difficulty, 1); // avoid divide-by-zero
+  return ((volume * relevance) / difficultyFactor).toFixed(2);
+}
+
+const keywords = [
+  { term: "digital marketing tools",      volume: 9900, difficulty: 62, relevance: 9 },
+  { term: "free digital marketing tools", volume: 2400, difficulty: 31, relevance: 10 },
+];
+
+keywords
+  .map(k => ({ ...k, score: opportunityScore(k) }))
+  .sort((a, b) => b.score - a.score)
+  .forEach(k => console.log(`${k.term} → score ${k.score}`));
+</code></pre>
+</div>
+
+<h2>Free keyword research resources</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Tool</th><th>What it's good for</th></tr></thead>
+<tbody>
+<tr><td>Google Keyword Planner</td><td>Volume ranges & CPC (requires a free Google Ads account)</td></tr>
+<tr><td>Google Search Console</td><td>Queries your site <em>already</em> ranks for — often the best "quick win" source</td></tr>
+<tr><td>Google Autocomplete & "People Also Ask"</td><td>Real long-tail phrasing, free, unlimited</td></tr>
+<tr><td>AnswerThePublic</td><td>Question-based keyword clusters visualized</td></tr>
+<tr><td>Ubersuggest / Ahrefs Free Tools</td><td>Limited free volume/difficulty lookups</td></tr>
+</tbody>
+</table></div>
+
+<div class="callout callout--interview">
+<div class="callout__title">🎯 Interview Corner</div>
+<p><strong>Q: How do you decide which keywords to target first with a limited content budget?</strong><br>
+A: Prioritize by opportunity, not just volume: look for keywords with clear commercial or informational relevance to your persona, moderate-to-low difficulty relative to your site's current authority, and existing SERP weaknesses (thin or outdated top-ranking content you can outdo).</p>
+</div>

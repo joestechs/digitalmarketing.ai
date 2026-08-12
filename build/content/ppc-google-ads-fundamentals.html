@@ -1,0 +1,76 @@
+<div class="page-eyebrow"><span class="page-eyebrow__dot" style="background:var(--ppc)"></span>SEM & Paid Ads</div>
+<h1>PPC & Google Ads Fundamentals</h1>
+<p class="lede">Pay-Per-Click advertising lets you buy placement at the top of search results (or across the web) and pay only when someone clicks — turning marketing spend into an auction you can optimize in near real time.</p>
+
+<h2>Account structure</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Level</th><th>Contains</th><th>Set at this level</th></tr></thead>
+<tbody>
+<tr><td><strong>Account</strong></td><td>Billing, all campaigns</td><td>Payment method, conversion tracking</td></tr>
+<tr><td><strong>Campaign</strong></td><td>One or more ad groups</td><td>Daily budget, network (Search/Display/Shopping), location targeting, bid strategy</td></tr>
+<tr><td><strong>Ad Group</strong></td><td>A tightly related set of keywords + ads</td><td>Keywords, default bids</td></tr>
+<tr><td><strong>Ads & Keywords</strong></td><td>The actual creative and match types</td><td>Headlines, descriptions, match type</td></tr>
+</tbody>
+</table></div>
+
+<h2>Keyword match types</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Match type</th><th>Syntax</th><th>Triggers on</th></tr></thead>
+<tbody>
+<tr><td>Broad match</td><td><code>running shoes</code></td><td>Related searches, synonyms, broadest reach, least control</td></tr>
+<tr><td>Phrase match</td><td><code>"running shoes"</code></td><td>Searches containing that meaning/phrase in order</td></tr>
+<tr><td>Exact match</td><td><code>[running shoes]</code></td><td>Searches with the same meaning as the exact term — tightest control</td></tr>
+</tbody>
+</table></div>
+<p>Add <strong>negative keywords</strong> (e.g. <code>-free</code>, <code>-jobs</code>) to exclude irrelevant searches and stop wasting budget on clicks that will never convert.</p>
+
+<h2>Quality Score</h2>
+<p>Google scores every keyword 1–10 based on three components. It doesn't directly set your rank, but it heavily influences your effective cost-per-click and ad rank in the auction — a higher Quality Score means you can pay less to achieve the same position.</p>
+<ul>
+<li><strong>Expected CTR</strong> — historical likelihood your ad gets clicked for that keyword</li>
+<li><strong>Ad relevance</strong> — how closely the ad text matches the keyword's intent</li>
+<li><strong>Landing page experience</strong> — relevance, load speed, and usability of the destination page</li>
+</ul>
+
+<h2>Ad Rank formula (conceptually)</h2>
+<div class="code-block">
+<div class="code-block__bar"><span>ad-rank.txt</span><button class="copy-btn">Copy</button></div>
+<pre><code>Ad Rank = Max CPC bid × Quality Score × expected impact of ad extensions/format
+
+// A lower bid with a higher Quality Score can outrank
+// a higher bid with poor relevance and a weak landing page.
+</code></pre>
+</div>
+
+<h2>Bidding strategies</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Strategy</th><th>Optimizes for</th><th>Good for</th></tr></thead>
+<tbody>
+<tr><td>Manual CPC</td><td>You set max bid per click</td><td>Full control, small/testing accounts</td></tr>
+<tr><td>Maximize Clicks</td><td>Most clicks within budget</td><td>Early traffic building</td></tr>
+<tr><td>Target CPA</td><td>Automated bidding toward a cost-per-acquisition goal</td><td>Lead gen with conversion tracking set up</td></tr>
+<tr><td>Target ROAS</td><td>Automated bidding toward a return-on-ad-spend goal</td><td>E-commerce with revenue tracking</td></tr>
+</tbody>
+</table></div>
+
+<div class="callout callout--tip">
+<div class="callout__title">💡 Tip</div>
+<p>Automated bidding strategies (Target CPA/ROAS) need enough conversion volume (Google recommends 15-30+ conversions in the last 30 days) to learn effectively. Start new campaigns with manual or Maximize Clicks bidding, then switch once you have data.</p>
+</div>
+
+<h2>Key PPC metrics</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Metric</th><th>Formula</th></tr></thead>
+<tbody>
+<tr><td>CTR (Click-Through Rate)</td><td>Clicks ÷ Impressions × 100</td></tr>
+<tr><td>CPC (Cost Per Click)</td><td>Total Spend ÷ Clicks</td></tr>
+<tr><td>CPA (Cost Per Acquisition)</td><td>Total Spend ÷ Conversions</td></tr>
+<tr><td>ROAS (Return on Ad Spend)</td><td>Revenue ÷ Ad Spend</td></tr>
+</tbody>
+</table></div>
+
+<div class="callout callout--interview">
+<div class="callout__title">🎯 Interview Corner</div>
+<p><strong>Q: A campaign has a high CTR but a low conversion rate. What's wrong?</strong><br>
+A: The ad copy is doing its job (people click), so the mismatch is downstream — usually a landing page that doesn't match ad expectations, a confusing or slow checkout/form, or the keyword traffic being lower-intent than the ad promised. Always check ad-to-landing-page message match first.</p>
+</div>

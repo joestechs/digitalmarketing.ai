@@ -1,0 +1,81 @@
+<div class="page-eyebrow"><span class="page-eyebrow__dot" style="background:var(--seo)"></span>SEO</div>
+<h1>Technical SEO</h1>
+<p class="lede">Technical SEO ensures search engines can efficiently crawl, render, and index your site — and that your pages load fast enough for both users and ranking algorithms to reward them.</p>
+
+<h2>robots.txt</h2>
+<p>A plain-text file at your domain root that tells crawlers which paths they may or may not request.</p>
+<div class="code-block">
+<div class="code-block__bar"><span>/robots.txt</span><button class="copy-btn">Copy</button></div>
+<pre><code>User-agent: *
+Disallow: /admin/
+Disallow: /cart/
+Disallow: /*?sessionid=
+Allow: /
+
+Sitemap: https://example.com/sitemap.xml
+</code></pre>
+</div>
+<div class="callout callout--warn">
+<div class="callout__title">⚠ Common Mistake</div>
+<p>Accidentally leaving <code>Disallow: /</code> in production after launching from staging. This blocks the entire site from being crawled — always double check robots.txt after a deploy.</p>
+</div>
+
+<h2>XML sitemap</h2>
+<div class="code-block">
+<div class="code-block__bar"><span>/sitemap.xml</span><button class="copy-btn">Copy</button></div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://example.com/&lt;/loc&gt;
+    &lt;lastmod&gt;2026-08-01&lt;/lastmod&gt;
+    &lt;changefreq&gt;weekly&lt;/changefreq&gt;
+    &lt;priority&gt;1.0&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://example.com/blog/seo-guide/&lt;/loc&gt;
+    &lt;lastmod&gt;2026-07-20&lt;/lastmod&gt;
+  &lt;/url&gt;
+&lt;/urlset&gt;
+</code></pre>
+</div>
+<p>Submit the sitemap URL directly in Google Search Console to speed up discovery of new/updated pages.</p>
+
+<h2>Canonical tags</h2>
+<p>Prevent duplicate-content issues when the same content is reachable at multiple URLs (e.g. with and without tracking parameters):</p>
+<div class="code-block">
+<div class="code-block__bar"><span>index.html</span><button class="copy-btn">Copy</button></div>
+<pre><code>&lt;link rel="canonical" href="https://example.com/product/blue-shirt/" /&gt;</code></pre>
+</div>
+
+<h2>Core Web Vitals</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Metric</th><th>Measures</th><th>Good threshold</th></tr></thead>
+<tbody>
+<tr><td><strong>LCP</strong> (Largest Contentful Paint)</td><td>Loading speed of the main content</td><td>≤ 2.5s</td></tr>
+<tr><td><strong>INP</strong> (Interaction to Next Paint)</td><td>Responsiveness to user input</td><td>≤ 200ms</td></tr>
+<tr><td><strong>CLS</strong> (Cumulative Layout Shift)</td><td>Visual stability while loading</td><td>≤ 0.1</td></tr>
+</tbody>
+</table></div>
+<p>Test with <strong>PageSpeed Insights</strong>, <strong>Lighthouse</strong> (built into Chrome DevTools), or field data from <strong>Google Search Console → Core Web Vitals</strong> report.</p>
+
+<h2>Mobile-first & HTTPS</h2>
+<p>Google indexes the mobile version of your site by default ("mobile-first indexing"). Ensure responsive layouts, tappable button sizes (≥44px), and readable font sizes without zooming. HTTPS is a baseline ranking signal and a hard requirement for modern browser features.</p>
+
+<h2>Rendering: SSR vs. CSR</h2>
+<p>Search engines can render JavaScript, but it's slower and less reliable than parsing plain HTML. If your site is a heavy client-side rendered (CSR) app (e.g. a pure client-side React SPA), consider Server-Side Rendering (SSR) or Static Site Generation (SSG) for SEO-critical pages so crawlers see full content immediately, without waiting on a JS render pass.</p>
+
+<h2>Quick technical SEO audit checklist</h2>
+<ul>
+<li>Site returns correct HTTP status codes (no soft 404s serving 200)</li>
+<li>robots.txt doesn't block important paths</li>
+<li>XML sitemap is valid, submitted, and free of non-canonical URLs</li>
+<li>Every page has a self-referencing canonical tag (or points correctly to the preferred version)</li>
+<li>Core Web Vitals pass on real mobile devices, not just desktop</li>
+<li>No broken internal links (404s) or redirect chains longer than 1 hop</li>
+</ul>
+
+<div class="callout callout--interview">
+<div class="callout__title">🎯 Interview Corner</div>
+<p><strong>Q: A page isn't appearing in Google despite being live for weeks. How do you debug it?</strong><br>
+A: Check Google Search Console's URL Inspection tool first — it tells you exactly why (not indexed, crawled but not indexed, blocked by robots.txt, noindex tag present, duplicate/canonicalized elsewhere). Then verify internal links point to it, it's in the sitemap, and it isn't accidentally set to <code>noindex</code>.</p>
+</div>

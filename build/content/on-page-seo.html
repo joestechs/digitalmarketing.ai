@@ -1,0 +1,79 @@
+<div class="page-eyebrow"><span class="page-eyebrow__dot" style="background:var(--seo)"></span>SEO</div>
+<h1>On-Page SEO</h1>
+<p class="lede">On-page SEO is everything you control directly on a page — HTML structure, content, and internal links — to help search engines understand exactly what it's about and who it's for.</p>
+
+<h2>Title tag & meta description</h2>
+<p>The title tag is the single strongest on-page ranking signal and the blue link users click in search results. The meta description doesn't directly affect rankings but heavily influences click-through rate.</p>
+<div class="code-block">
+<div class="code-block__bar"><span>index.html</span><button class="copy-btn">Copy</button></div>
+<pre><code>&lt;head&gt;
+  &lt;title&gt;Best Trail Running Shoes for Wide Feet (2026 Guide)&lt;/title&gt;
+  &lt;meta name="description" content="We tested 14 pairs over 3 months. See which
+    trail running shoes actually fit wide feet without sacrificing grip." /&gt;
+  &lt;link rel="canonical" href="https://example.com/wide-feet-trail-shoes/" /&gt;
+&lt;/head&gt;
+</code></pre>
+</div>
+<ul>
+<li>Keep titles under ~60 characters so they don't get truncated in search results.</li>
+<li>Put the primary keyword near the front, but write for humans first — a title that gets no clicks ranks nowhere.</li>
+<li>Every page needs a <strong>unique</strong> title and description; duplicates confuse ranking signals.</li>
+</ul>
+
+<h2>Heading structure</h2>
+<p>Use exactly one <code>&lt;h1&gt;</code> per page (the main topic), then <code>&lt;h2&gt;</code>/<code>&lt;h3&gt;</code> to organize subtopics logically — the same way this page is structured. Headings help both search engines and skimming readers, and they're what AI answer engines pull from when generating summaries.</p>
+
+<h2>Structured data (schema markup)</h2>
+<p>Schema.org markup, written as JSON-LD, tells search engines exactly what type of content a page contains, unlocking rich results like star ratings, FAQs, and recipe cards.</p>
+<div class="code-block">
+<div class="code-block__bar"><span>faq-schema.json</span><button class="copy-btn">Copy</button></div>
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How long does SEO take to show results?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Most sites see meaningful movement in 3-6 months, with compounding gains after 12 months of consistent work."
+    }
+  }]
+}
+&lt;/script&gt;
+</code></pre>
+</div>
+
+<h2>Image optimization</h2>
+<div class="code-block">
+<div class="code-block__bar"><span>image.html</span><button class="copy-btn">Copy</button></div>
+<pre><code>&lt;img
+  src="trail-shoe-wide-fit.webp"
+  alt="Side profile of a wide-fit trail running shoe showing the reinforced toe box"
+  width="800" height="600"
+  loading="lazy"
+/&gt;
+</code></pre>
+</div>
+<ul>
+<li><strong>Descriptive alt text</strong> — for accessibility and image search; describe the image, don't stuff keywords.</li>
+<li><strong>Modern formats</strong> (WebP/AVIF) and explicit <code>width</code>/<code>height</code> reduce file size and prevent layout shift (a Core Web Vital).</li>
+<li><code>loading="lazy"</code> for below-the-fold images improves initial page load.</li>
+</ul>
+
+<h2>Internal linking</h2>
+<p>Link between related pages using descriptive anchor text (not "click here"). Internal links pass authority ("link equity") to important pages and help crawlers discover new content faster. A common structure is the <strong>topic cluster</strong> model: one comprehensive "pillar" page links out to several narrower "cluster" pages, which link back to the pillar.</p>
+
+<h2>Content quality checklist</h2>
+<ul>
+<li>Matches the search intent you identified during keyword research.</li>
+<li>Covers the topic more thoroughly or more clearly than the current top 3 results.</li>
+<li>Includes original insight, data, or examples — not a rewrite of existing top results.</li>
+<li>Readable: short paragraphs, subheadings every 200–300 words, no walls of text.</li>
+</ul>
+
+<div class="callout callout--interview">
+<div class="callout__title">🎯 Interview Corner</div>
+<p><strong>Q: If you could only fix three on-page SEO issues on a client's site today, what would they be and why?</strong><br>
+A: A strong answer prioritizes by impact-to-effort: (1) fix missing/duplicate title tags site-wide (huge, fast impact), (2) fix any pages targeting the same keyword (cannibalization — consolidate them), (3) add internal links from high-authority pages to priority pages that currently have few links.</p>
+</div>

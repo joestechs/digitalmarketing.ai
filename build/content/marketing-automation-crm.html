@@ -1,0 +1,62 @@
+<div class="page-eyebrow"><span class="page-eyebrow__dot" style="background:var(--email)"></span>Email & Automation</div>
+<h1>Marketing Automation & CRM</h1>
+<p class="lede">Marketing automation triggers the right message to the right person based on their behavior — without a human manually sending each one — turning a static list into a responsive nurture system.</p>
+
+<h2>Common automation triggers</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Trigger event</th><th>Automated response</th></tr></thead>
+<tbody>
+<tr><td>New signup</td><td>Welcome series (3-5 emails over 1-2 weeks)</td></tr>
+<tr><td>Cart abandonment</td><td>Reminder email(s), often escalating to a discount by the final touch</td></tr>
+<tr><td>Downloaded a lead magnet</td><td>Nurture sequence building toward a sales conversation or offer</td></tr>
+<tr><td>No engagement in 60+ days</td><td>Re-engagement / win-back sequence, then list suppression if still inactive</td></tr>
+<tr><td>Made a purchase</td><td>Onboarding sequence, then post-purchase cross-sell timed to typical reorder window</td></tr>
+</tbody>
+</table></div>
+
+<h2>A simple drip sequence, mapped out</h2>
+<div class="code-block">
+<div class="code-block__bar"><span>welcome-sequence.txt</span><button class="copy-btn">Copy</button></div>
+<pre><code>Day 0:  "Welcome + here's what to expect"          → sets expectations
+Day 2:  "Here's the #1 mistake beginners make"      → delivers early value
+Day 5:  "How [Customer] used this to solve X"       → social proof
+Day 8:  "Ready to go further? Here's your next step" → soft CTA / offer
+Day 14: "Still thinking it over? Here's an FAQ"      → objection handling
+</code></pre>
+</div>
+
+<h2>Lead scoring</h2>
+<p>Assigns points to a lead based on demographic fit and behavioral engagement, so sales teams prioritize the leads most likely to convert instead of treating every lead identically.</p>
+<div class="code-block">
+<div class="code-block__bar"><span>lead-scoring.js</span><button class="copy-btn">Copy</button></div>
+<pre><code>function scoreLead(lead) {
+  let score = 0;
+  if (lead.jobTitle?.includes('Director') || lead.jobTitle?.includes('VP')) score += 20;
+  if (lead.companySize > 50) score += 15;
+  if (lead.visitedPricingPage) score += 25;
+  if (lead.downloadedCaseStudy) score += 10;
+  if (lead.emailOpens > 3) score += 10;
+  if (lead.daysSinceLastActivity > 30) score -= 15; // decay for staleness
+  return Math.max(score, 0);
+}
+// Leads scoring above a threshold (e.g. 50) get routed to sales;
+// below it, they stay in automated nurture.
+</code></pre>
+</div>
+
+<h2>Marketing automation vs. CRM</h2>
+<div class="table-wrap"><table>
+<thead><tr><th></th><th>Marketing Automation</th><th>CRM</th></tr></thead>
+<tbody>
+<tr><td>Primary job</td><td>Nurture leads at scale with triggered messaging</td><td>Track individual relationships and deals through a sales pipeline</td></tr>
+<tr><td>Owned by</td><td>Marketing</td><td>Sales</td></tr>
+<tr><td>Examples</td><td>HubSpot Marketing Hub, Mailchimp, ActiveCampaign, Klaviyo</td><td>Salesforce, HubSpot CRM, Pipedrive</td></tr>
+</tbody>
+</table></div>
+<p>Modern platforms increasingly blur this line (HubSpot offers both), but conceptually: automation decides <em>what message to send when</em>; a CRM tracks <em>where each specific person/deal stands</em>. They typically sync data both ways so a lead's engagement history informs sales conversations.</p>
+
+<div class="callout callout--interview">
+<div class="callout__title">🎯 Interview Corner</div>
+<p><strong>Q: How would you design a lead-scoring model with no historical conversion data yet?</strong><br>
+A: Start with qualitative, common-sense weighting (firmographic fit + high-intent behaviors like pricing-page visits), launch it, then retrain the weights once you have enough closed-won/closed-lost data to see which signals actually correlated with real conversions — treat the first version as a hypothesis, not a final answer.</p>
+</div>

@@ -1,0 +1,80 @@
+<div class="page-eyebrow"><span class="page-eyebrow__dot" style="background:var(--analytics)"></span>Analytics & Data</div>
+<h1>Web Analytics & GA4</h1>
+<p class="lede">Google Analytics 4 (GA4) is an event-based analytics platform: instead of pre-defined "pageviews and sessions" like older Universal Analytics, everything — a pageview, a click, a purchase — is logged as a flexible, custom-parameterized event.</p>
+
+<h2>Installing GA4</h2>
+<div class="code-block">
+<div class="code-block__bar"><span>index.html</span><button class="copy-btn">Copy</button></div>
+<pre><code>&lt;!-- Google tag (gtag.js) --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+&lt;/script&gt;
+</code></pre>
+</div>
+
+<h2>Sending a custom event</h2>
+<div class="code-block">
+<div class="code-block__bar"><span>track-signup.js</span><button class="copy-btn">Copy</button></div>
+<pre><code>document.getElementById('signup-btn').addEventListener('click', () =&gt; {
+  gtag('event', 'sign_up', {
+    method: 'email',
+    campaign: 'homepage_hero'
+  });
+});
+
+// Standard e-commerce purchase event
+gtag('event', 'purchase', {
+  transaction_id: 'T12345',
+  value: 49.99,
+  currency: 'USD',
+  items: [{ item_id: 'SKU123', item_name: 'Trail Shoe', price: 49.99, quantity: 1 }]
+});
+</code></pre>
+</div>
+
+<h2>Core GA4 concepts</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Concept</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>Event</td><td>Any interaction logged — page_view, click, scroll, purchase, and custom ones you define</td></tr>
+<tr><td>Parameter</td><td>Extra detail attached to an event (e.g., <code>value</code>, <code>currency</code> on a purchase event)</td></tr>
+<tr><td>Conversion (Key Event)</td><td>Any event you mark as a meaningful business outcome (e.g., <code>sign_up</code>, <code>purchase</code>)</td></tr>
+<tr><td>Audience</td><td>A segment of users defined by behavior/attributes, usable for remarketing or analysis</td></tr>
+<tr><td>Explorations</td><td>Free-form report builder for funnel, path, and cohort analysis</td></tr>
+</tbody>
+</table></div>
+
+<h2>Google Tag Manager (GTM)</h2>
+<p>GTM lets marketers deploy and manage tracking tags (GA4, ad pixels, custom scripts) through a visual interface, without editing site code for every change. It works via Tags (what to fire), Triggers (when to fire it), and Variables (dynamic values used by tags/triggers).</p>
+<div class="code-block">
+<div class="code-block__bar"><span>gtm-trigger-example.txt</span><button class="copy-btn">Copy</button></div>
+<pre><code>Trigger: Click - All Elements
+  Condition: Click Classes contains "cta-button"
+Tag: GA4 Event
+  Event Name: cta_click
+  Parameters: { button_location: {{Click Text}} }
+</code></pre>
+</div>
+
+<h2>Essential GA4 reports</h2>
+<ul>
+<li><strong>Acquisition</strong> — which channels (organic, paid, social, referral, direct) bring traffic</li>
+<li><strong>Engagement</strong> — pages/events users interact with most, average engagement time</li>
+<li><strong>Monetization</strong> — revenue, purchases, e-commerce performance</li>
+<li><strong>Retention</strong> — how many users return after their first visit</li>
+</ul>
+
+<div class="callout callout--warn">
+<div class="callout__title">⚠ Common Mistake</div>
+<p>Not marking key business events ("Key Events" in GA4, formerly "Conversions") explicitly. Without this, GA4's default reports won't reflect what actually matters to the business, and automated bidding tools that rely on this data won't optimize correctly.</p>
+</div>
+
+<div class="callout callout--interview">
+<div class="callout__title">🎯 Interview Corner</div>
+<p><strong>Q: What's the fundamental difference between GA4 and old Universal Analytics?</strong><br>
+A: Universal Analytics was built around sessions and pageviews as first-class concepts. GA4 is event-based: literally everything, including a pageview, is just an event with parameters. This makes GA4 more flexible for tracking app + web behavior and cross-device journeys, but requires deliberately defining what counts as a meaningful event.</p>
+</div>

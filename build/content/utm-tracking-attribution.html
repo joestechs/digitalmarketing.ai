@@ -1,0 +1,69 @@
+<div class="page-eyebrow"><span class="page-eyebrow__dot" style="background:var(--analytics)"></span>Analytics & Data</div>
+<h1>UTM Tracking & Attribution Models</h1>
+<p class="lede">UTM parameters tag every link so analytics tools know exactly which campaign, channel, and piece of content drove a visit — without tagging, "traffic" is a black box.</p>
+
+<h2>The five UTM parameters</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Parameter</th><th>Answers</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><code>utm_source</code></td><td>Where did the click come from?</td><td>newsletter, google, facebook</td></tr>
+<tr><td><code>utm_medium</code></td><td>What type of channel?</td><td>email, cpc, social, referral</td></tr>
+<tr><td><code>utm_campaign</code></td><td>Which specific campaign?</td><td>summer_sale_2026</td></tr>
+<tr><td><code>utm_content</code></td><td>Which specific creative/link (for A/B testing links)?</td><td>header_cta vs footer_cta</td></tr>
+<tr><td><code>utm_term</code></td><td>Which paid keyword (mostly legacy, PPC-specific)?</td><td>trail+running+shoes</td></tr>
+</tbody>
+</table></div>
+
+<div class="code-block">
+<div class="code-block__bar"><span>utm-example.txt</span><button class="copy-btn">Copy</button></div>
+<pre><code>https://example.com/sale?utm_source=newsletter&utm_medium=email&utm_campaign=summer_sale_2026&utm_content=header_cta
+</code></pre>
+</div>
+
+<h2>Building UTM links programmatically</h2>
+<div class="code-block">
+<div class="code-block__bar"><span>build-utm.js</span><button class="copy-btn">Copy</button></div>
+<pre><code>function buildUtmUrl(baseUrl, params) {
+  const url = new URL(baseUrl);
+  Object.entries(params).forEach(([key, value]) => {
+    if (value) url.searchParams.set(`utm_${key}`, value.toLowerCase().replace(/\s+/g, '_'));
+  });
+  return url.toString();
+}
+
+buildUtmUrl('https://example.com/sale', {
+  source: 'newsletter', medium: 'email', campaign: 'Summer Sale 2026', content: 'header_cta'
+});
+// → https://example.com/sale?utm_source=newsletter&utm_medium=email&utm_campaign=summer_sale_2026&utm_content=header_cta
+</code></pre>
+</div>
+<div class="callout callout--warn">
+<div class="callout__title">⚠ Common Mistake</div>
+<p>Inconsistent capitalization/naming ("Newsletter" vs "newsletter" vs "NEWSLETTER") fragments a single channel into multiple rows in reports. Maintain a shared UTM naming convention doc across the whole team.</p>
+</div>
+
+<h2>Attribution models</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Model</th><th>Credits</th><th>Weakness</th></tr></thead>
+<tbody>
+<tr><td>Last-click</td><td>100% to the final touchpoint before conversion</td><td>Ignores everything that built awareness/consideration earlier</td></tr>
+<tr><td>First-click</td><td>100% to the very first touchpoint</td><td>Ignores what actually closed the deal</td></tr>
+<tr><td>Linear</td><td>Equal credit across every touchpoint</td><td>Treats a passing glance the same as a decisive interaction</td></tr>
+<tr><td>Time-decay</td><td>More credit to touchpoints closer to conversion</td><td>Still somewhat arbitrary weighting</td></tr>
+<tr><td>Data-driven</td><td>Machine-learning model weights each touchpoint by actual observed contribution</td><td>Requires significant conversion volume to be reliable</td></tr>
+</tbody>
+</table></div>
+
+<div class="callout callout--tip">
+<div class="callout__title">💡 Tip</div>
+<p>Don't rely on a single attribution model as absolute truth. Use last-click for quick operational decisions, but review a multi-touch/data-driven view before making major budget cuts to a channel that primarily plays an assist role (like top-of-funnel content or awareness ads).</p>
+</div>
+
+<h2>UTMs vs. click IDs (gclid, fbclid)</h2>
+<p>Ad platforms also append their own click identifiers (<code>gclid</code> for Google, <code>fbclid</code> for Meta) automatically, which power more precise platform-side conversion tracking. UTMs remain essential for cross-platform reporting in tools like GA4 that need a consistent way to label traffic regardless of ad network.</p>
+
+<div class="callout callout--interview">
+<div class="callout__title">🎯 Interview Corner</div>
+<p><strong>Q: Why might Google Analytics and Facebook Ads Manager show different numbers of conversions for the same campaign?</strong><br>
+A: Different attribution windows (e.g., Facebook's default 7-day click/1-day view vs. GA4's own model), different tracking mechanisms (pixel vs. UTM+GA4 events), cross-device tracking limitations, and ad blockers/privacy settings affecting each platform differently. Neither number is "wrong" — they're measuring with different rules.</p>
+</div>

@@ -1,0 +1,64 @@
+<div class="page-eyebrow"><span class="page-eyebrow__dot" style="background:var(--email)"></span>Email & Automation</div>
+<h1>List Building & Lead Magnets</h1>
+<p class="lede">An email list is a marketing asset you own outright. Building one deliberately, with real consent and genuine value exchange, matters more than list size alone.</p>
+
+<h2>What makes a good lead magnet</h2>
+<p>A lead magnet trades a piece of free value for an email address. The best ones are specific, immediately useful, and closely tied to what you eventually sell.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Format</th><th>Works well for</th></tr></thead>
+<tbody>
+<tr><td>Checklist / cheat sheet</td><td>Quick-win audiences who want a fast reference</td></tr>
+<tr><td>Template (spreadsheet, doc)</td><td>B2B, operational/process-driven audiences</td></tr>
+<tr><td>Free tool or calculator</td><td>High engagement, strong differentiation, reusable traffic driver</td></tr>
+<tr><td>Mini email course</td><td>Topics that benefit from being taught over several days</td></tr>
+<tr><td>Discount code</td><td>E-commerce, price-sensitive first-time buyers</td></tr>
+<tr><td>Webinar / free workshop</td><td>Higher-consideration B2B or coaching offers</td></tr>
+</tbody>
+</table></div>
+
+<div class="callout callout--warn">
+<div class="callout__title">⚠ Common Mistake</div>
+<p>Building a generic lead magnet ("10% off!") disconnected from your product's actual value. Weak lead magnets attract low-intent subscribers who never convert and quietly tank your engagement metrics over time.</p>
+</div>
+
+<h2>A simple signup form</h2>
+<div class="code-block">
+<div class="code-block__bar"><span>signup-form.html</span><button class="copy-btn">Copy</button></div>
+<pre><code>&lt;form id="lead-form"&gt;
+  &lt;label for="email"&gt;Get the free SEO checklist&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required placeholder="you@email.com" /&gt;
+  &lt;button type="submit"&gt;Send Me the Checklist&lt;/button&gt;
+  &lt;p style="font-size:12px;color:#888;"&gt;No spam. Unsubscribe anytime.&lt;/p&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+document.getElementById('lead-form').addEventListener('submit', async (e) =&gt; {
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  await fetch('/api/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, source: 'seo-checklist-lead-magnet' })
+  });
+  window.location.href = '/thank-you';
+});
+&lt;/script&gt;
+</code></pre>
+</div>
+
+<h2>Where to place opt-in forms</h2>
+<ul>
+<li><strong>Exit-intent popups</strong> — trigger as a user's cursor moves toward closing the tab; captures otherwise-lost visitors</li>
+<li><strong>Content upgrades</strong> — a bonus resource specific to the exact blog post being read, offered mid-content</li>
+<li><strong>Footer/persistent forms</strong> — low-friction, low-intrusion, steady baseline conversion</li>
+<li><strong>Checkout/order confirmation</strong> — capture emails from purchasers who haven't yet joined the list</li>
+</ul>
+
+<h2>Consent & compliance basics</h2>
+<p>Depending on jurisdiction, regulations like GDPR (EU) and CAN-SPAM (US) set requirements: clear consent before subscribing, an easy and honored unsubscribe/opt-out mechanism, accurate sender identification, and (in GDPR regions) documented lawful basis for processing personal data. These aren't just legal boxes to tick — they directly protect deliverability and brand trust.</p>
+
+<div class="callout callout--interview">
+<div class="callout__title">🎯 Interview Corner</div>
+<p><strong>Q: Would you rather have a list of 50,000 unengaged subscribers or 5,000 highly engaged ones?</strong><br>
+A: 5,000 engaged — list quality drives deliverability (engagement signals inbox providers use to route future sends) and actual revenue per send. A large disengaged list actively hurts deliverability for the whole list and inflates vanity metrics without business value.</p>
+</div>

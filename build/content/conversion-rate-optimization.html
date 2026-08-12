@@ -1,0 +1,71 @@
+<div class="page-eyebrow"><span class="page-eyebrow__dot" style="background:var(--analytics)"></span>Analytics & Data</div>
+<h1>CRO & A/B Testing</h1>
+<p class="lede">Conversion Rate Optimization (CRO) is the systematic process of increasing the percentage of visitors who take a desired action — through structured hypothesis testing, not guesswork or "best practice" copy-pasting.</p>
+
+<h2>The CRO process</h2>
+<ol>
+<li><strong>Research</strong> — analytics (where do people drop off?), heatmaps/session recordings, user testing, on-site surveys.</li>
+<li><strong>Hypothesize</strong> — "Because [data], we believe changing [element] will cause [effect] for [audience]."</li>
+<li><strong>Prioritize</strong> — score hypotheses (e.g. the PIE or ICE framework) so you test the highest-impact ideas first.</li>
+<li><strong>Test</strong> — run a controlled A/B or multivariate test.</li>
+<li><strong>Analyze & implement</strong> — ship the winner (or a partial learning) and move to the next hypothesis.</li>
+</ol>
+
+<h2>ICE prioritization framework</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Factor</th><th>Question</th></tr></thead>
+<tbody>
+<tr><td>Impact</td><td>If this wins, how much will it move the metric?</td></tr>
+<tr><td>Confidence</td><td>How sure are we, based on data/precedent, that it will work?</td></tr>
+<tr><td>Ease</td><td>How much effort/time to implement and test?</td></tr>
+</tbody>
+</table></div>
+<p>Score each 1-10 and multiply (or average) to rank your test backlog objectively instead of testing whatever a stakeholder liked most recently.</p>
+
+<h2>A/B testing statistics, simplified</h2>
+<div class="code-block">
+<div class="code-block__bar"><span>ab-test-significance.js</span><button class="copy-btn">Copy</button></div>
+<pre><code>// Simplified two-proportion z-test for A/B test significance
+function isSignificant(convA, visitorsA, convB, visitorsB) {
+  const pA = convA / visitorsA;
+  const pB = convB / visitorsB;
+  const pPooled = (convA + convB) / (visitorsA + visitorsB);
+  const se = Math.sqrt(pPooled * (1 - pPooled) * (1 / visitorsA + 1 / visitorsB));
+  const z = (pB - pA) / se;
+  return { zScore: z.toFixed(2), significant: Math.abs(z) > 1.96 }; // ~95% confidence
+}
+
+isSignificant(120, 4000, 150, 4000);
+// { zScore: '1.97', significant: true }
+</code></pre>
+</div>
+<div class="callout callout--warn">
+<div class="callout__title">⚠ Common Mistake</div>
+<p><strong>Stopping a test early</strong> the moment it looks significant ("peeking"). Statistical significance calculated before reaching your pre-determined sample size is unreliable and inflates false positives. Decide sample size/duration in advance and stick to it.</p>
+</div>
+
+<h2>What to test, roughly in order of typical impact</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Element</th><th>Why it tends to move the needle</th></tr></thead>
+<tbody>
+<tr><td>Headline / value proposition</td><td>Determines whether the visitor understands the offer at all</td></tr>
+<tr><td>CTA copy & placement</td><td>Directly gates the conversion action</td></tr>
+<tr><td>Page/form length & friction</td><td>Every extra step loses a percentage of visitors</td></tr>
+<tr><td>Social proof placement</td><td>Reduces perceived risk right before the decision point</td></tr>
+<tr><td>Pricing presentation</td><td>Anchoring and framing measurably affect purchase decisions</td></tr>
+<tr><td>Button color</td><td>Usually minimal impact alone — rarely worth testing in isolation</td></tr>
+</tbody>
+</table></div>
+
+<h2>Qualitative research tools</h2>
+<ul>
+<li><strong>Heatmaps</strong> (Hotjar, Microsoft Clarity) — visualize where people click, scroll, and stop.</li>
+<li><strong>Session recordings</strong> — watch anonymized real user sessions to spot confusion or friction.</li>
+<li><strong>On-site surveys/polls</strong> — ask "What almost stopped you from purchasing today?" directly.</li>
+</ul>
+
+<div class="callout callout--interview">
+<div class="callout__title">🎯 Interview Corner</div>
+<p><strong>Q: A test shows a 15% lift but only ran for 3 days with 200 visitors per variant. Do you ship it?</strong><br>
+A: No — that sample is almost certainly too small and the duration too short to account for day-of-week variance and reach statistical significance. Explain the risk of false positives from underpowered tests and recommend running it to a pre-calculated sample size across at least one full week (ideally 2+) before deciding.</p>
+</div>

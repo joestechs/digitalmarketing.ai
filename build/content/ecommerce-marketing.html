@@ -1,0 +1,61 @@
+<div class="page-eyebrow"><span class="page-eyebrow__dot" style="background:var(--tools)"></span>E-commerce & Affiliate</div>
+<h1>E-commerce Marketing</h1>
+<p class="lede">E-commerce marketing applies every channel in this guide toward one specific, measurable goal: getting someone to complete a purchase online — with a few channel-specific tactics unique to online retail.</p>
+
+<h2>Product page optimization</h2>
+<ul>
+<li><strong>High-quality images</strong> from multiple angles, with zoom — the closest online substitute for in-person inspection.</li>
+<li><strong>Benefit-driven descriptions</strong>, not just spec lists (tie back to Copywriting Fundamentals).</li>
+<li><strong>Reviews & ratings visible above the fold</strong> — social proof directly reduces purchase hesitation.</li>
+<li><strong>Clear shipping/returns info</strong> near the buy button — a top reason for cart abandonment is uncertainty about these.</li>
+<li><strong>Structured data (Product schema)</strong> so search results can show price/rating rich snippets.</li>
+</ul>
+<div class="code-block">
+<div class="code-block__bar"><span>product-schema.json</span><button class="copy-btn">Copy</button></div>
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Wide-Fit Trail Running Shoe",
+  "image": "https://example.com/shoe.jpg",
+  "offers": { "@type": "Offer", "price": "89.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "1204" }
+}
+&lt;/script&gt;
+</code></pre>
+</div>
+
+<h2>Cart & checkout optimization</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Common friction point</th><th>Fix</th></tr></thead>
+<tbody>
+<tr><td>Forced account creation</td><td>Offer guest checkout</td></tr>
+<tr><td>Unexpected shipping costs at checkout</td><td>Show estimated total cost earlier in the flow</td></tr>
+<tr><td>Too many form fields</td><td>Use address autocomplete, minimize required fields</td></tr>
+<tr><td>Limited payment options</td><td>Support major cards + at least one digital wallet (Apple Pay/Google Pay)</td></tr>
+<tr><td>No trust signals</td><td>Security badges, clear return policy link near payment fields</td></tr>
+</tbody>
+</table></div>
+
+<h2>Marketplace SEO (Amazon, Etsy)</h2>
+<p>Marketplace search algorithms (e.g. Amazon's A9/A10) weigh different signals than Google: conversion rate, sales velocity, keyword-rich titles/bullet points, and review quantity/recency matter heavily. Optimizing a marketplace listing is closer to CRO than traditional web SEO — the ranking system directly rewards what sells.</p>
+
+<h2>E-commerce email flows</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Flow</th><th>Typical trigger</th></tr></thead>
+<tbody>
+<tr><td>Abandoned cart</td><td>Item added to cart, no purchase within X hours</td></tr>
+<tr><td>Browse abandonment</td><td>Viewed product(s), didn't add to cart</td></tr>
+<tr><td>Post-purchase</td><td>Order confirmation → shipping updates → review request → replenishment reminder</td></tr>
+<tr><td>Win-back</td><td>No purchase in 60-90+ days for a previously active customer</td></tr>
+</tbody>
+</table></div>
+
+<h2>Key e-commerce metrics</h2>
+<p>Beyond the general formulas covered in Marketing Metrics: <strong>Cart Abandonment Rate</strong> (carts started ÷ carts not completed), <strong>Repeat Purchase Rate</strong>, and <strong>Revenue Per Visitor (RPV)</strong> = Total Revenue ÷ Total Sessions — a single number that blends traffic quality and conversion performance.</p>
+
+<div class="callout callout--interview">
+<div class="callout__title">🎯 Interview Corner</div>
+<p><strong>Q: Cart abandonment is at 75%. Walk me through how you'd reduce it.</strong><br>
+A: 75% is actually near industry average, so first benchmark against the specific vertical rather than assuming crisis. Then diagnose with session recordings and checkout funnel analytics to find the exact drop-off step, fix the top friction point identified (often shipping cost surprise or forced account creation), and layer in an abandoned-cart email sequence as a safety net.</p>
+</div>

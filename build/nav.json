@@ -1,0 +1,89 @@
+{
+  "groups": [
+    {
+      "id": "foundations", "title": "Foundations", "color": "var(--foundation)",
+      "pages": [
+        { "slug": "what-is-digital-marketing", "title": "What Is Digital Marketing?" },
+        { "slug": "marketing-funnel-customer-journey", "title": "The Funnel & Customer Journey" },
+        { "slug": "buyer-personas-market-research", "title": "Buyer Personas & Research" },
+        { "slug": "strategy-goals-kpis", "title": "Strategy, Goals & KPIs" }
+      ]
+    },
+    {
+      "id": "seo", "title": "SEO", "color": "var(--seo)",
+      "pages": [
+        { "slug": "seo-fundamentals", "title": "SEO Fundamentals" },
+        { "slug": "keyword-research", "title": "Keyword Research" },
+        { "slug": "on-page-seo", "title": "On-Page SEO" },
+        { "slug": "technical-seo", "title": "Technical SEO" },
+        { "slug": "off-page-seo-link-building", "title": "Off-Page SEO & Link Building" },
+        { "slug": "local-seo", "title": "Local SEO" }
+      ]
+    },
+    {
+      "id": "sem-ppc", "title": "SEM & Paid Ads", "color": "var(--ppc)",
+      "pages": [
+        { "slug": "ppc-google-ads-fundamentals", "title": "PPC & Google Ads Fundamentals" },
+        { "slug": "ad-copywriting-landing-pages", "title": "Ad Copy & Landing Pages" },
+        { "slug": "social-media-advertising", "title": "Social Media Advertising" },
+        { "slug": "retargeting-programmatic", "title": "Retargeting & Programmatic" }
+      ]
+    },
+    {
+      "id": "content", "title": "Content Marketing", "color": "var(--content)",
+      "pages": [
+        { "slug": "content-strategy", "title": "Content Strategy" },
+        { "slug": "copywriting-fundamentals", "title": "Copywriting Fundamentals" },
+        { "slug": "blogging-seo-content", "title": "Blogging & SEO Content" },
+        { "slug": "video-youtube-marketing", "title": "Video & YouTube Marketing" }
+      ]
+    },
+    {
+      "id": "social", "title": "Social Media", "color": "var(--social)",
+      "pages": [
+        { "slug": "social-media-fundamentals", "title": "Social Media Fundamentals" },
+        { "slug": "social-media-strategy-calendar", "title": "Strategy & Content Calendar" },
+        { "slug": "influencer-marketing", "title": "Influencer Marketing" }
+      ]
+    },
+    {
+      "id": "email-automation", "title": "Email & Automation", "color": "var(--email)",
+      "pages": [
+        { "slug": "email-marketing-fundamentals", "title": "Email Marketing Fundamentals" },
+        { "slug": "list-building-lead-magnets", "title": "List Building & Lead Magnets" },
+        { "slug": "marketing-automation-crm", "title": "Marketing Automation & CRM" }
+      ]
+    },
+    {
+      "id": "analytics", "title": "Analytics & Data", "color": "var(--analytics)",
+      "pages": [
+        { "slug": "web-analytics-ga4", "title": "Web Analytics & GA4" },
+        { "slug": "conversion-rate-optimization", "title": "CRO & A/B Testing" },
+        { "slug": "marketing-metrics-kpis", "title": "Marketing Metrics & Formulas" },
+        { "slug": "utm-tracking-attribution", "title": "UTM Tracking & Attribution" }
+      ]
+    },
+    {
+      "id": "ecommerce-affiliate", "title": "E-commerce & Affiliate", "color": "var(--tools)",
+      "pages": [
+        { "slug": "affiliate-marketing", "title": "Affiliate Marketing" },
+        { "slug": "ecommerce-marketing", "title": "E-commerce Marketing" }
+      ]
+    },
+    {
+      "id": "tools-ai", "title": "Tools & AI", "color": "#7CE0FF",
+      "pages": [
+        { "slug": "marketing-tools-tech-stack", "title": "Marketing Tools & Tech Stack" },
+        { "slug": "ai-in-digital-marketing", "title": "AI in Digital Marketing" }
+      ]
+    },
+    {
+      "id": "reference", "title": "Reference", "color": "#F4F4F5",
+      "pages": [
+        { "slug": "glossary", "title": "Glossary (A–Z)", "path": "glossary/index.html" },
+        { "slug": "interview-questions", "title": "Interview Questions Hub", "path": "interview-questions/index.html" },
+        { "slug": "projects", "title": "Practical Projects", "path": "projects/index.html" }
+      ]
+    }
+  ]
+}

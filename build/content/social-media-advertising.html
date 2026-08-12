@@ -1,0 +1,68 @@
+<div class="page-eyebrow"><span class="page-eyebrow__dot" style="background:var(--ppc)"></span>SEM & Paid Ads</div>
+<h1>Social Media Advertising</h1>
+<p class="lede">Social ads target people based on who they are and what they're interested in — rather than what they're actively searching for — making them powerful for awareness, discovery, and highly specific audience targeting.</p>
+
+<h2>Search ads vs. social ads</h2>
+<div class="table-wrap"><table>
+<thead><tr><th></th><th>Search (Google Ads)</th><th>Social (Meta, TikTok, LinkedIn)</th></tr></thead>
+<tbody>
+<tr><td>Intent</td><td>High — user is actively searching</td><td>Lower — user is browsing/scrolling</td></tr>
+<tr><td>Targeting basis</td><td>Keywords typed</td><td>Demographics, interests, behaviors, lookalikes</td></tr>
+<tr><td>Best for</td><td>Bottom-of-funnel, transactional intent</td><td>Awareness, discovery, visually-driven products</td></tr>
+<tr><td>Format</td><td>Mostly text</td><td>Image, video, carousel, native-feeling content</td></tr>
+</tbody>
+</table></div>
+
+<h2>Platform-by-platform ad strengths</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Platform</th><th>Strongest for</th><th>Key ad format</th></tr></thead>
+<tbody>
+<tr><td>Meta (Facebook/Instagram)</td><td>Broad reach, e-commerce, detailed interest targeting</td><td>Advantage+ campaigns, Reels ads</td></tr>
+<tr><td>TikTok Ads</td><td>Gen Z/Millennial reach, viral-style native creative</td><td>In-feed video, Spark Ads (boosting organic posts)</td></tr>
+<tr><td>LinkedIn Ads</td><td>B2B, job-title/industry targeting</td><td>Sponsored Content, InMail</td></tr>
+<tr><td>Pinterest Ads</td><td>High purchase-intent visual discovery</td><td>Shopping ads, Idea Pins</td></tr>
+</tbody>
+</table></div>
+
+<h2>Audience targeting types</h2>
+<ul>
+<li><strong>Core/Interest targeting</strong> — demographics + declared interests/behaviors.</li>
+<li><strong>Custom Audiences</strong> — built from your own data: website visitors (via pixel), email lists, app users.</li>
+<li><strong>Lookalike / Advantage Audiences</strong> — the platform finds new people who resemble your best existing customers.</li>
+<li><strong>Retargeting audiences</strong> — people who visited your site or engaged with content but didn't convert.</li>
+</ul>
+
+<h2>Installing a tracking pixel (Meta example)</h2>
+<div class="code-block">
+<div class="code-block__bar"><span>index.html</span><button class="copy-btn">Copy</button></div>
+<pre><code>&lt;!-- Meta Pixel Base Code --&gt;
+&lt;script&gt;
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+&lt;/script&gt;
+
+&lt;!-- Fire a custom conversion event, e.g. on a purchase confirmation page --&gt;
+&lt;script&gt;
+fbq('track', 'Purchase', { value: 49.99, currency: 'USD' });
+&lt;/script&gt;
+</code></pre>
+</div>
+
+<h2>Creative best practices</h2>
+<ul>
+<li>Design for sound-off viewing — use captions; most social video is watched muted.</li>
+<li>Hook within the first 1-2 seconds of video; feeds punish slow openings.</li>
+<li>Native-feeling creative (looks like organic content) usually outperforms polished, obviously "ad-like" creative.</li>
+<li>Always run 3-5 creative variants per ad set — creative fatigue sets in within days on high-frequency platforms.</li>
+</ul>
+
+<div class="callout callout--interview">
+<div class="callout__title">🎯 Interview Corner</div>
+<p><strong>Q: How would you decide budget split between Google Search Ads and Meta Ads for a new e-commerce brand?</strong><br>
+A: Consider funnel stage and existing demand: if the product solves a problem people already search for, weight Search Ads higher (capturing existing intent, generally lower CPA). If it's a novel/impulse product with little existing search volume, weight social ads higher to build awareness and discovery first, then layer in search/retargeting.</p>
+</div>

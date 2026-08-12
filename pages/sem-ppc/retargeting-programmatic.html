@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Retargeting & Programmatic — digitalmarketing.ai</title>
+<meta name="description" content="Retargeting & Programmatic: a practical, in-depth digital marketing tutorial with code, tools and interview Q&A." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><circle cx=%2212%22 cy=%2212%22 r=%2211%22 fill=%22%2300D9A3%22/></svg>" />
+<link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <button class="topbar__menu-btn" type="button" aria-label="Toggle navigation">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+  <a class="brand" href="../../index.html">
+    <span class="brand__mark"></span>
+    digitalmarketing<span class="brand__dim">.ai</span>
+  </a>
+  <div class="topbar__search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search topics, tools, interview Q&A…" autocomplete="off" />
+    <div class="search-results"></div>
+  </div>
+  <nav class="topbar__links">
+    <a href="../../interview-questions/index.html">Interview Prep</a>
+    <a href="../../projects/index.html">Projects</a>
+    <a class="gh-star" href="https://github.com/joestechs/digitalmarketing.ai" target="_blank" rel="noopener">★ GitHub</a>
+  </nav>
+</header>
+
+<div class="shell">
+  <aside class="sidebar">
+    <div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:var(--foundation)"></span>
+          <span>Foundations</span>
+          <span class="side-group__count">4</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../../pages/foundations/what-is-digital-marketing.html" class="">What Is Digital Marketing?</a></li>
+<li><a href="../../pages/foundations/marketing-funnel-customer-journey.html" class="">The Funnel & Customer Journey</a></li>
+<li><a href="../../pages/foundations/buyer-personas-market-research.html" class="">Buyer Personas & Research</a></li>
+<li><a href="../../pages/foundations/strategy-goals-kpis.html" class="">Strategy, Goals & KPIs</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:var(--seo)"></span>
+          <span>SEO</span>
+          <span class="side-group__count">6</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../../pages/seo/seo-fundamentals.html" class="">SEO Fundamentals</a></li>
+<li><a href="../../pages/seo/keyword-research.html" class="">Keyword Research</a></li>
+<li><a href="../../pages/seo/on-page-seo.html" class="">On-Page SEO</a></li>
+<li><a href="../../pages/seo/technical-seo.html" class="">Technical SEO</a></li>
+<li><a href="../../pages/seo/off-page-seo-link-building.html" class="">Off-Page SEO & Link Building</a></li>
+<li><a href="../../pages/seo/local-seo.html" class="">Local SEO</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:var(--ppc)"></span>
+          <span>SEM & Paid Ads</span>
+          <span class="side-group__count">4</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../../pages/sem-ppc/ppc-google-ads-fundamentals.html" class="">PPC & Google Ads Fundamentals</a></li>
+<li><a href="../../pages/sem-ppc/ad-copywriting-landing-pages.html" class="">Ad Copy & Landing Pages</a></li>
+<li><a href="../../pages/sem-ppc/social-media-advertising.html" class="">Social Media Advertising</a></li>
+<li><a href="../../pages/sem-ppc/retargeting-programmatic.html" class="is-active">Retargeting & Programmatic</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:var(--content)"></span>
+          <span>Content Marketing</span>
+          <span class="side-group__count">4</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../../pages/content/content-strategy.html" class="">Content Strategy</a></li>
+<li><a href="../../pages/content/copywriting-fundamentals.html" class="">Copywriting Fundamentals</a></li>
+<li><a href="../../pages/content/blogging-seo-content.html" class="">Blogging & SEO Content</a></li>
+<li><a href="../../pages/content/video-youtube-marketing.html" class="">Video & YouTube Marketing</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:var(--social)"></span>
+          <span>Social Media</span>
+          <span class="side-group__count">3</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../../pages/social/social-media-fundamentals.html" class="">Social Media Fundamentals</a></li>
+<li><a href="../../pages/social/social-media-strategy-calendar.html" class="">Strategy & Content Calendar</a></li>
+<li><a href="../../pages/social/influencer-marketing.html" class="">Influencer Marketing</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:var(--email)"></span>
+          <span>Email & Automation</span>
+          <span class="side-group__count">3</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../../pages/email-automation/email-marketing-fundamentals.html" class="">Email Marketing Fundamentals</a></li>
+<li><a href="../../pages/email-automation/list-building-lead-magnets.html" class="">List Building & Lead Magnets</a></li>
+<li><a href="../../pages/email-automation/marketing-automation-crm.html" class="">Marketing Automation & CRM</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:var(--analytics)"></span>
+          <span>Analytics & Data</span>
+          <span class="side-group__count">4</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../../pages/analytics/web-analytics-ga4.html" class="">Web Analytics & GA4</a></li>
+<li><a href="../../pages/analytics/conversion-rate-optimization.html" class="">CRO & A/B Testing</a></li>
+<li><a href="../../pages/analytics/marketing-metrics-kpis.html" class="">Marketing Metrics & Formulas</a></li>
+<li><a href="../../pages/analytics/utm-tracking-attribution.html" class="">UTM Tracking & Attribution</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:var(--tools)"></span>
+          <span>E-commerce & Affiliate</span>
+          <span class="side-group__count">2</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../../pages/ecommerce-affiliate/affiliate-marketing.html" class="">Affiliate Marketing</a></li>
+<li><a href="../../pages/ecommerce-affiliate/ecommerce-marketing.html" class="">E-commerce Marketing</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:#7CE0FF"></span>
+          <span>Tools & AI</span>
+          <span class="side-group__count">2</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../../pages/tools-ai/marketing-tools-tech-stack.html" class="">Marketing Tools & Tech Stack</a></li>
+<li><a href="../../pages/tools-ai/ai-in-digital-marketing.html" class="">AI in Digital Marketing</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:#F4F4F5"></span>
+          <span>Reference</span>
+          <span class="side-group__count">3</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../../glossary/index.html" class="">Glossary (A–Z)</a></li>
+<li><a href="../../interview-questions/index.html" class="">Interview Questions Hub</a></li>
+<li><a href="../../projects/index.html" class="">Practical Projects</a></li></ul>
+      </div>
+    <div class="sidebar__foot">
+      Open source on <a href="https://github.com/joestechs/digitalmarketing.ai" target="_blank" rel="noopener">GitHub</a>. PRs welcome.
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="content">
+      <div class="breadcrumb"><a href="../../index.html">Home</a> <span>/</span> <span>SEM & Paid Ads</span> <span>/</span> <span>Retargeting & Programmatic</span></div>
+      <div class="page-eyebrow"><span class="page-eyebrow__dot" style="background:var(--ppc)"></span>SEM & Paid Ads</div>
+<h1>Retargeting & Programmatic Advertising</h1>
+<p class="lede">Most visitors don't convert on their first visit. Retargeting (remarketing) keeps your brand in front of people who already showed interest, while programmatic advertising automates buying ad space across the wider web.</p>
+
+<h2>How retargeting works</h2>
+<ol>
+<li>A visitor lands on your site with a tracking pixel installed.</li>
+<li>The pixel drops a cookie (or uses server-side tracking) tagging that browser/user as having visited a specific page or taken a specific action.</li>
+<li>When that person browses other sites in the ad network, your ads are eligible to show to them specifically.</li>
+</ol>
+
+<h2>Common retargeting segments</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Segment</th><th>Message strategy</th></tr></thead>
+<tbody>
+<tr><td>All site visitors (last 30 days)</td><td>General brand awareness reinforcement</td></tr>
+<tr><td>Product page viewers, no purchase</td><td>Show the exact product viewed + social proof</td></tr>
+<tr><td>Cart abandoners</td><td>Urgency/incentive: "Your cart is waiting" ± limited discount</td></tr>
+<tr><td>Past purchasers</td><td>Cross-sell/upsell, loyalty offers</td></tr>
+<tr><td>Email list (non-purchasers)</td><td>Sync as a Custom Audience for consistent cross-channel messaging</td></tr>
+</tbody>
+</table></div>
+
+<div class="callout callout--tip">
+<div class="callout__title">💡 Tip</div>
+<p>Use frequency capping (limiting how many times one person sees an ad per day/week). Uncapped retargeting quickly turns into "ad fatigue" — annoyance that actively damages brand perception instead of nudging a conversion.</p>
+</div>
+
+<h2>Programmatic advertising basics</h2>
+<p>Programmatic buying uses automated, real-time bidding (RTB) auctions to purchase display, video, and native ad inventory across thousands of publisher sites in milliseconds — instead of a human negotiating placements site-by-site.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>DSP (Demand-Side Platform)</td><td>Where advertisers buy inventory (e.g., Google Display & Video 360, The Trade Desk)</td></tr>
+<tr><td>SSP (Supply-Side Platform)</td><td>Where publishers sell their ad inventory</td></tr>
+<tr><td>Ad Exchange</td><td>The marketplace connecting DSPs and SSPs via real-time auctions</td></tr>
+<tr><td>RTB (Real-Time Bidding)</td><td>The auction happening in the ~100ms it takes a page to load</td></tr>
+</tbody>
+</table></div>
+
+<h2>The cookie-deprivation shift</h2>
+<p>Third-party cookies — the traditional mechanism for cross-site retargeting — are being phased out across major browsers. The industry is shifting toward: first-party data (your own email/CRM lists), server-side/Conversions API tracking, contextual targeting (matching ads to page content instead of user history), and privacy-preserving cohort-based targeting APIs.</p>
+
+<div class="callout callout--warn">
+<div class="callout__title">⚠ Common Mistake</div>
+<p>Relying entirely on browser pixels for conversion tracking. Server-side tracking (e.g. Meta Conversions API, Google Enhanced Conversions) is increasingly necessary as ad blockers and privacy settings block a growing share of client-side pixels.</p>
+</div>
+
+<div class="callout callout--interview">
+<div class="callout__title">🎯 Interview Corner</div>
+<p><strong>Q: What's the difference between remarketing and programmatic advertising?</strong><br>
+A: Remarketing is a targeting strategy (show ads to people who already interacted with you). Programmatic is a buying method (automated, auction-based purchase of ad inventory). You can run remarketing campaigns programmatically, but programmatic also includes buying inventory for entirely new audiences.</p>
+</div>
+
+      <div class="page-nav"><a href="../../pages/sem-ppc/social-media-advertising.html"><span class="page-nav__label">&larr; Previous</span>Social Media Advertising</a><a href="../../pages/content/content-strategy.html" class="page-nav__next"><span class="page-nav__label">Next &rarr;</span>Content Strategy</a></div>
+    </div>
+  </main>
+</div>
+
+<footer class="footer">
+  digitalmarketing.ai — a free, open-source, practical digital marketing reference. MIT Licensed. Built for learners, by learners.
+</footer>
+
+<script>window.SITE_INDEX = [{"title":"What Is Digital Marketing?","category":"Foundations","url":"../../pages/foundations/what-is-digital-marketing.html"},{"title":"The Funnel & Customer Journey","category":"Foundations","url":"../../pages/foundations/marketing-funnel-customer-journey.html"},{"title":"Buyer Personas & Research","category":"Foundations","url":"../../pages/foundations/buyer-personas-market-research.html"},{"title":"Strategy, Goals & KPIs","category":"Foundations","url":"../../pages/foundations/strategy-goals-kpis.html"},{"title":"SEO Fundamentals","category":"SEO","url":"../../pages/seo/seo-fundamentals.html"},{"title":"Keyword Research","category":"SEO","url":"../../pages/seo/keyword-research.html"},{"title":"On-Page SEO","category":"SEO","url":"../../pages/seo/on-page-seo.html"},{"title":"Technical SEO","category":"SEO","url":"../../pages/seo/technical-seo.html"},{"title":"Off-Page SEO & Link Building","category":"SEO","url":"../../pages/seo/off-page-seo-link-building.html"},{"title":"Local SEO","category":"SEO","url":"../../pages/seo/local-seo.html"},{"title":"PPC & Google Ads Fundamentals","category":"SEM & Paid Ads","url":"../../pages/sem-ppc/ppc-google-ads-fundamentals.html"},{"title":"Ad Copy & Landing Pages","category":"SEM & Paid Ads","url":"../../pages/sem-ppc/ad-copywriting-landing-pages.html"},{"title":"Social Media Advertising","category":"SEM & Paid Ads","url":"../../pages/sem-ppc/social-media-advertising.html"},{"title":"Retargeting & Programmatic","category":"SEM & Paid Ads","url":"../../pages/sem-ppc/retargeting-programmatic.html"},{"title":"Content Strategy","category":"Content Marketing","url":"../../pages/content/content-strategy.html"},{"title":"Copywriting Fundamentals","category":"Content Marketing","url":"../../pages/content/copywriting-fundamentals.html"},{"title":"Blogging & SEO Content","category":"Content Marketing","url":"../../pages/content/blogging-seo-content.html"},{"title":"Video & YouTube Marketing","category":"Content Marketing","url":"../../pages/content/video-youtube-marketing.html"},{"title":"Social Media Fundamentals","category":"Social Media","url":"../../pages/social/social-media-fundamentals.html"},{"title":"Strategy & Content Calendar","category":"Social Media","url":"../../pages/social/social-media-strategy-calendar.html"},{"title":"Influencer Marketing","category":"Social Media","url":"../../pages/social/influencer-marketing.html"},{"title":"Email Marketing Fundamentals","category":"Email & Automation","url":"../../pages/email-automation/email-marketing-fundamentals.html"},{"title":"List Building & Lead Magnets","category":"Email & Automation","url":"../../pages/email-automation/list-building-lead-magnets.html"},{"title":"Marketing Automation & CRM","category":"Email & Automation","url":"../../pages/email-automation/marketing-automation-crm.html"},{"title":"Web Analytics & GA4","category":"Analytics & Data","url":"../../pages/analytics/web-analytics-ga4.html"},{"title":"CRO & A/B Testing","category":"Analytics & Data","url":"../../pages/analytics/conversion-rate-optimization.html"},{"title":"Marketing Metrics & Formulas","category":"Analytics & Data","url":"../../pages/analytics/marketing-metrics-kpis.html"},{"title":"UTM Tracking & Attribution","category":"Analytics & Data","url":"../../pages/analytics/utm-tracking-attribution.html"},{"title":"Affiliate Marketing","category":"E-commerce & Affiliate","url":"../../pages/ecommerce-affiliate/affiliate-marketing.html"},{"title":"E-commerce Marketing","category":"E-commerce & Affiliate","url":"../../pages/ecommerce-affiliate/ecommerce-marketing.html"},{"title":"Marketing Tools & Tech Stack","category":"Tools & AI","url":"../../pages/tools-ai/marketing-tools-tech-stack.html"},{"title":"AI in Digital Marketing","category":"Tools & AI","url":"../../pages/tools-ai/ai-in-digital-marketing.html"},{"title":"Glossary (A–Z)","category":"Reference","url":"../../glossary/index.html"},{"title":"Interview Questions Hub","category":"Reference","url":"../../interview-questions/index.html"},{"title":"Practical Projects","category":"Reference","url":"../../projects/index.html"}];</script>
+<script src="../../js/main.js"></script>
+</body>
+</html>

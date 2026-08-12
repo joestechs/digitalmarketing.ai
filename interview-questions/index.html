@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Interview Questions Hub — digitalmarketing.ai</title>
+<meta name="description" content="Interview Questions Hub: a practical, in-depth digital marketing tutorial with code, tools and interview Q&A." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><circle cx=%2212%22 cy=%2212%22 r=%2211%22 fill=%22%2300D9A3%22/></svg>" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <button class="topbar__menu-btn" type="button" aria-label="Toggle navigation">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+  <a class="brand" href="../index.html">
+    <span class="brand__mark"></span>
+    digitalmarketing<span class="brand__dim">.ai</span>
+  </a>
+  <div class="topbar__search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search topics, tools, interview Q&A…" autocomplete="off" />
+    <div class="search-results"></div>
+  </div>
+  <nav class="topbar__links">
+    <a href="../interview-questions/index.html">Interview Prep</a>
+    <a href="../projects/index.html">Projects</a>
+    <a class="gh-star" href="https://github.com/joestechs/digitalmarketing.ai" target="_blank" rel="noopener">★ GitHub</a>
+  </nav>
+</header>
+
+<div class="shell">
+  <aside class="sidebar">
+    <div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:var(--foundation)"></span>
+          <span>Foundations</span>
+          <span class="side-group__count">4</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../pages/foundations/what-is-digital-marketing.html" class="">What Is Digital Marketing?</a></li>
+<li><a href="../pages/foundations/marketing-funnel-customer-journey.html" class="">The Funnel & Customer Journey</a></li>
+<li><a href="../pages/foundations/buyer-personas-market-research.html" class="">Buyer Personas & Research</a></li>
+<li><a href="../pages/foundations/strategy-goals-kpis.html" class="">Strategy, Goals & KPIs</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:var(--seo)"></span>
+          <span>SEO</span>
+          <span class="side-group__count">6</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../pages/seo/seo-fundamentals.html" class="">SEO Fundamentals</a></li>
+<li><a href="../pages/seo/keyword-research.html" class="">Keyword Research</a></li>
+<li><a href="../pages/seo/on-page-seo.html" class="">On-Page SEO</a></li>
+<li><a href="../pages/seo/technical-seo.html" class="">Technical SEO</a></li>
+<li><a href="../pages/seo/off-page-seo-link-building.html" class="">Off-Page SEO & Link Building</a></li>
+<li><a href="../pages/seo/local-seo.html" class="">Local SEO</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:var(--ppc)"></span>
+          <span>SEM & Paid Ads</span>
+          <span class="side-group__count">4</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../pages/sem-ppc/ppc-google-ads-fundamentals.html" class="">PPC & Google Ads Fundamentals</a></li>
+<li><a href="../pages/sem-ppc/ad-copywriting-landing-pages.html" class="">Ad Copy & Landing Pages</a></li>
+<li><a href="../pages/sem-ppc/social-media-advertising.html" class="">Social Media Advertising</a></li>
+<li><a href="../pages/sem-ppc/retargeting-programmatic.html" class="">Retargeting & Programmatic</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:var(--content)"></span>
+          <span>Content Marketing</span>
+          <span class="side-group__count">4</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../pages/content/content-strategy.html" class="">Content Strategy</a></li>
+<li><a href="../pages/content/copywriting-fundamentals.html" class="">Copywriting Fundamentals</a></li>
+<li><a href="../pages/content/blogging-seo-content.html" class="">Blogging & SEO Content</a></li>
+<li><a href="../pages/content/video-youtube-marketing.html" class="">Video & YouTube Marketing</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:var(--social)"></span>
+          <span>Social Media</span>
+          <span class="side-group__count">3</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../pages/social/social-media-fundamentals.html" class="">Social Media Fundamentals</a></li>
+<li><a href="../pages/social/social-media-strategy-calendar.html" class="">Strategy & Content Calendar</a></li>
+<li><a href="../pages/social/influencer-marketing.html" class="">Influencer Marketing</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:var(--email)"></span>
+          <span>Email & Automation</span>
+          <span class="side-group__count">3</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../pages/email-automation/email-marketing-fundamentals.html" class="">Email Marketing Fundamentals</a></li>
+<li><a href="../pages/email-automation/list-building-lead-magnets.html" class="">List Building & Lead Magnets</a></li>
+<li><a href="../pages/email-automation/marketing-automation-crm.html" class="">Marketing Automation & CRM</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:var(--analytics)"></span>
+          <span>Analytics & Data</span>
+          <span class="side-group__count">4</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../pages/analytics/web-analytics-ga4.html" class="">Web Analytics & GA4</a></li>
+<li><a href="../pages/analytics/conversion-rate-optimization.html" class="">CRO & A/B Testing</a></li>
+<li><a href="../pages/analytics/marketing-metrics-kpis.html" class="">Marketing Metrics & Formulas</a></li>
+<li><a href="../pages/analytics/utm-tracking-attribution.html" class="">UTM Tracking & Attribution</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:var(--tools)"></span>
+          <span>E-commerce & Affiliate</span>
+          <span class="side-group__count">2</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../pages/ecommerce-affiliate/affiliate-marketing.html" class="">Affiliate Marketing</a></li>
+<li><a href="../pages/ecommerce-affiliate/ecommerce-marketing.html" class="">E-commerce Marketing</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:#7CE0FF"></span>
+          <span>Tools & AI</span>
+          <span class="side-group__count">2</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../pages/tools-ai/marketing-tools-tech-stack.html" class="">Marketing Tools & Tech Stack</a></li>
+<li><a href="../pages/tools-ai/ai-in-digital-marketing.html" class="">AI in Digital Marketing</a></li></ul>
+      </div>
+<div class="side-group">
+        <button class="side-group__title" type="button">
+          <span class="side-group__dot" style="background:#F4F4F5"></span>
+          <span>Reference</span>
+          <span class="side-group__count">3</span>
+          <svg class="side-group__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="side-group__list"><li><a href="../glossary/index.html" class="">Glossary (A–Z)</a></li>
+<li><a href="../interview-questions/index.html" class="is-active">Interview Questions Hub</a></li>
+<li><a href="../projects/index.html" class="">Practical Projects</a></li></ul>
+      </div>
+    <div class="sidebar__foot">
+      Open source on <a href="https://github.com/joestechs/digitalmarketing.ai" target="_blank" rel="noopener">GitHub</a>. PRs welcome.
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="content">
+      <div class="breadcrumb"><a href="../index.html">Home</a> <span>/</span> <span>Reference</span> <span>/</span> <span>Interview Questions Hub</span></div>
+      <div class="page-eyebrow"><span class="page-eyebrow__dot" style="background:var(--ppc)"></span>Reference</div>
+<h1>Digital Marketing Interview Questions</h1>
+<p class="lede">80+ real interview questions organized by discipline, with model answers that show the reasoning an interviewer is actually listening for — not just a memorized definition.</p>
+
+<div class="pill-row" data-filter-group data-filter-target=".qa">
+  <button class="pill is-active" data-filter="all">All</button>
+  <button class="pill" data-filter="foundations">Foundations</button>
+  <button class="pill" data-filter="seo">SEO</button>
+  <button class="pill" data-filter="ppc">PPC/SEM</button>
+  <button class="pill" data-filter="content">Content</button>
+  <button class="pill" data-filter="social">Social</button>
+  <button class="pill" data-filter="email">Email</button>
+  <button class="pill" data-filter="analytics">Analytics</button>
+  <button class="pill" data-filter="general">General/Behavioral</button>
+</div>
+
+<h2>Foundations & Strategy</h2>
+
+<div class="qa" data-tags="foundations,general">
+<button class="qa__q">1. What's the difference between marketing strategy and marketing tactics?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Strategy is the "why" and "what" — the overall goal and the chosen path to reach it (e.g. "win market share among budget-conscious college students"). Tactics are the specific, executable "how" (a TikTok influencer campaign, a discount code). A common interview trap is describing a tactic when asked for strategy — always tie the tactic back to the underlying goal first.</p></div></div>
+</div>
+
+<div class="qa" data-tags="foundations">
+<button class="qa__q">2. Walk me through how you'd launch a digital marketing plan for a brand-new product with a $10,000 monthly budget.</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Structure the answer in steps: define the persona and SMART goals, choose 2-3 channels matched to that persona rather than spreading thin, allocate budget with a testing reserve, set primary KPIs before spending a dollar, and define a review cadence (e.g. biweekly) to reallocate budget toward what's working.</p></div></div>
+</div>
+
+<div class="qa" data-tags="foundations">
+<button class="qa__q">3. What is a buyer persona and why does it matter?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>A semi-fictional profile of an ideal customer built from real research (interviews, analytics, support tickets) — used to keep messaging, channel choice, and content aimed at an actual audience instead of "everyone."</p></div></div>
+</div>
+
+<div class="qa" data-tags="foundations">
+<button class="qa__q">4. Explain the marketing funnel (TOFU/MOFU/BOFU) in your own words.</button>
+<div class="qa__a"><div class="qa__a-inner"><p>TOFU (awareness) attracts people who have a problem but don't know your brand. MOFU (consideration) builds trust and captures contact info as they compare options. BOFU (decision) pushes a ready buyer to convert with proof and urgency. Good marketing maps specific content and channels to each stage rather than using one message for everyone.</p></div></div>
+</div>
+
+<div class="qa" data-tags="foundations,general">
+<button class="qa__q">5. How do you decide which marketing channel to prioritize with limited resources?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Weigh where the persona already spends attention, the cost/speed to test that channel, existing assets/skills on the team, and how directly the channel connects to the current funnel stage that needs the most help. Cite a framework like ICE (Impact, Confidence, Ease) to show a structured, not gut-feel, process.</p></div></div>
+</div>
+
+<div class="qa" data-tags="foundations">
+<button class="qa__q">6. What's a SMART goal, and can you write one for a hypothetical email campaign?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Specific, Measurable, Achievable, Relevant, Time-bound. Example: "Increase welcome-series open rate from 38% to 50% within 60 days by A/B testing three subject line variants."</p></div></div>
+</div>
+
+<div class="qa" data-tags="foundations">
+<button class="qa__q">7. What's the difference between a KPI and a metric?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Every KPI is a metric, but not every metric is a KPI. A metric is any measurable number (page views). A KPI is a metric explicitly tied to a business objective used to judge success (conversion rate, CAC). This checks whether a candidate thinks in business impact terms, not just dashboard numbers.</p></div></div>
+</div>
+
+<div class="qa" data-tags="foundations">
+<button class="qa__q">8. What is TAM/SAM/SOM and why would a marketer care?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Total Addressable Market, Serviceable Available Market, Serviceable Obtainable Market — a sizing exercise used to judge whether a market/niche is large enough to justify a campaign budget, and to set realistic growth ceiling expectations.</p></div></div>
+</div>
+
+<div class="qa" data-tags="foundations">
+<button class="qa__q">9. How would you measure brand awareness, a notoriously "soft" goal?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Combine proxies: branded search volume trend, direct traffic growth, social share of voice vs. competitors, survey-based aided/unaided recall, and impression reach from awareness campaigns — no single metric alone, but a directional bundle.</p></div></div>
+</div>
+
+<div class="qa" data-tags="foundations,general">
+<button class="qa__q">10. What's the difference between B2B and B2C marketing approaches?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>B2B typically has longer sales cycles, multiple decision-makers, higher-consideration purchases, and content/channels leaning toward LinkedIn, whitepapers, and case studies. B2C tends toward shorter cycles, single decision-makers, and emotion/impulse-driven channels like Instagram and paid social. The core frameworks (funnel, personas, KPIs) apply to both, but channel mix and messaging tone differ significantly.</p></div></div>
+</div>
+
+<h2>SEO</h2>
+
+<div class="qa" data-tags="seo">
+<button class="qa__q">11. Explain how a search engine goes from crawling a page to ranking it.</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Crawling (bots discover pages via links) → Indexing (content is parsed and stored in a searchable database) → Ranking (an algorithm scores indexed pages against 200+ signals per query and orders results). Technical SEO enables the first two steps; content quality and authority drive the third.</p></div></div>
+</div>
+
+<div class="qa" data-tags="seo">
+<button class="qa__q">12. What's the difference between on-page, off-page, and technical SEO?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>On-page: content and HTML elements on the page itself (titles, headers, content quality). Technical SEO: crawlability, indexing, site speed, structured data — the infrastructure layer. Off-page: signals from outside your site, primarily backlinks and brand mentions.</p></div></div>
+</div>
+
+<div class="qa" data-tags="seo">
+<button class="qa__q">13. A page isn't showing up in Google despite being live for weeks. How do you debug it?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Start with Google Search Console's URL Inspection tool — it states the exact reason (not indexed, blocked by robots.txt, has a noindex tag, canonicalized elsewhere). Then check internal links point to it, it's in the sitemap, and there isn't a duplicate-content conflict with another URL.</p></div></div>
+</div>
+
+<div class="qa" data-tags="seo">
+<button class="qa__q">14. What is keyword cannibalization and how do you fix it?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>When multiple pages on the same site target the same keyword/intent, splitting ranking signals and confusing Google about which page to rank. Fix by consolidating the pages (merge content, 301 redirect the weaker one) or clearly differentiating their intent/keyword targets.</p></div></div>
+</div>
+
+<div class="qa" data-tags="seo">
+<button class="qa__q">15. What are Core Web Vitals and why do they matter?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>LCP (loading speed), INP (interactivity/responsiveness), and CLS (visual stability) — Google's real-world page experience metrics, used as a ranking signal and, more importantly, as a direct driver of conversion rate and bounce rate regardless of SEO impact.</p></div></div>
+</div>
+
+<div class="qa" data-tags="seo">
+<button class="qa__q">16. What's the difference between a 301 and a 302 redirect, and why does it matter for SEO?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>A 301 is a permanent redirect and passes nearly all link equity to the new URL. A 302 is temporary and search engines generally keep the original URL indexed rather than transferring signals. Using a 302 for what should be a permanent move can stall SEO value transfer.</p></div></div>
+</div>
+
+<div class="qa" data-tags="seo">
+<button class="qa__q">17. How do you approach keyword research for a brand-new website with zero existing traffic?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Build a seed list from persona pain points, expand with a keyword tool, mine competitor content gaps, cluster by intent, then prioritize long-tail, lower-difficulty keywords first to build initial traction and authority before competing for harder head terms.</p></div></div>
+</div>
+
+<div class="qa" data-tags="seo">
+<button class="qa__q">18. What is E-E-A-T and how does it influence content strategy?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Experience, Expertise, Authoritativeness, Trustworthiness — quality signals Google's raters use, especially for YMYL (Your Money or Your Life) topics. In practice it pushes content strategy toward real author bios, first-hand experience/data, citations, and transparent, secure sites over thin, anonymous content.</p></div></div>
+</div>
+
+<div class="qa" data-tags="seo">
+<button class="qa__q">19. What's the difference between DA/DR and actual Google ranking factors?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Domain Authority (Moz) and Domain Rating (Ahrefs) are third-party estimates of backlink strength, useful for competitive benchmarking and link-prospecting — but Google itself does not use either metric. They're proxies, not ranking factors.</p></div></div>
+</div>
+
+<div class="qa" data-tags="seo">
+<button class="qa__q">20. How would you prioritize fixing technical SEO issues on an audit with 50+ flagged problems?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Sort by traffic/revenue impact and effort: crawlability blockers (accidental noindex/robots.txt blocks) first since they zero out a page entirely, then site-wide issues (missing titles, broken canonical logic) that scale across many pages, then page-specific performance issues on your highest-traffic pages.</p></div></div>
+</div>
+
+<div class="qa" data-tags="seo">
+<button class="qa__q">21. What's a featured snippet and how do you optimize for one?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>A direct-answer box Google shows above normal results ("position zero"). Optimize by answering the specific query in a tight 40-60 word paragraph directly beneath a matching heading, and using actual HTML lists/tables for comparative or sequential answers.</p></div></div>
+</div>
+
+<div class="qa" data-tags="seo">
+<button class="qa__q">22. Explain the difference between dofollow and nofollow links.</button>
+<div class="qa__a"><div class="qa__a-inner"><p>A dofollow link passes ranking authority ("link equity") to the linked page. A nofollow link (via <code>rel="nofollow"</code> or <code>"sponsored"</code>/<code>"ugc"</code>) tells search engines not to pass that signal — commonly used for paid links, user-generated content, or untrusted sources.</p></div></div>
+</div>
+
+<h2>PPC & SEM</h2>
+
+<div class="qa" data-tags="ppc">
+<button class="qa__q">23. What is Quality Score and why does it matter?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Google's 1-10 estimate of ad/keyword relevance, based on expected CTR, ad relevance, and landing page experience. It doesn't set rank directly but heavily influences effective CPC and Ad Rank — higher Quality Score means paying less for the same position.</p></div></div>
+</div>
+
+<div class="qa" data-tags="ppc">
+<button class="qa__q">24. A campaign has a high CTR but low conversion rate. What's your diagnosis?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>The ad is doing its job (earning clicks), so the mismatch is downstream: check message match between ad and landing page, page load speed, form/checkout friction, and whether the keyword's search intent actually matches the offer.</p></div></div>
+</div>
+
+<div class="qa" data-tags="ppc">
+<button class="qa__q">25. Explain the difference between broad, phrase, and exact match keywords.</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Broad match triggers on related searches/synonyms (widest reach, least control). Phrase match requires the searcher's query to contain that meaning/phrase. Exact match requires the query to closely match that specific term's meaning — tightest control, typically highest relevance but lowest volume.</p></div></div>
+</div>
+
+<div class="qa" data-tags="ppc">
+<button class="qa__q">26. When would you use Target CPA vs. Target ROAS bidding?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Target CPA optimizes toward a cost-per-conversion goal — good for lead gen where each conversion has roughly equal value. Target ROAS optimizes toward a revenue-per-spend ratio — better for e-commerce where order values vary significantly and revenue tracking is set up.</p></div></div>
+</div>
+
+<div class="qa" data-tags="ppc">
+<button class="qa__q">27. What are negative keywords and why are they important?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Keywords you explicitly exclude so your ads don't show for irrelevant searches (e.g. excluding "free" or "jobs" for a paid product). They prevent wasted spend on clicks that were never going to convert and improve overall campaign efficiency and Quality Score.</p></div></div>
+</div>
+
+<div class="qa" data-tags="ppc">
+<button class="qa__q">28. How do you decide budget allocation between Google Search Ads and Meta Ads for a new brand?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Weight Search Ads higher if the product solves a problem people already actively search for (captures existing demand at typically lower CPA). Weight social ads higher for novel/impulse products with little existing search volume, to build awareness and discovery first.</p></div></div>
+</div>
+
+<div class="qa" data-tags="ppc">
+<button class="qa__q">29. What's the difference between remarketing and programmatic advertising?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Remarketing is a targeting strategy — showing ads to people who already interacted with you. Programmatic is a buying method — automated, real-time-bidding purchase of ad inventory across many publishers. You can run remarketing campaigns programmatically, but programmatic also covers buying for entirely new audiences.</p></div></div>
+</div>
+
+<div class="qa" data-tags="ppc">
+<button class="qa__q">30. How would you structure a Google Ads account for a company selling 3 distinct product lines?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Separate campaigns per product line (for independent budget control and reporting), with tightly-themed ad groups inside each campaign — grouping only closely related keywords per ad group so ad copy and landing pages can stay highly relevant to each keyword cluster.</p></div></div>
+</div>
+
+<h2>Content Marketing</h2>
+
+<div class="qa" data-tags="content">
+<button class="qa__q">31. How long should a blog post be for SEO purposes?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>There's no universal word count — Google ranks based on satisfying search intent, not length. The correct process is checking current top-ranking pages for that keyword and matching or exceeding their depth of coverage, not hitting an arbitrary number.</p></div></div>
+</div>
+
+<div class="qa" data-tags="content">
+<button class="qa__q">32. What's the difference between a content pillar and a content cluster?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>A pillar is a broad, comprehensive page on a core topic. Clusters are narrower supporting articles that link back to the pillar. This structure signals topical authority to search engines and organizes internal linking systematically.</p></div></div>
+</div>
+
+<div class="qa" data-tags="content">
+<button class="qa__q">33. Rewrite this feature-led line as benefit-led: "Our app has real-time sync across devices."</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Sample answer: "Pick up exactly where you left off — on any device, instantly." This checks whether a candidate can translate technical specs into reader-facing value on the spot.</p></div></div>
+</div>
+
+<div class="qa" data-tags="content">
+<button class="qa__q">34. How do you measure content marketing ROI when SEO results take months to materialize?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Track leading indicators short-term (organic impressions in Search Console, time-on-page, email sign-ups from gated content) while the lagging indicator (organic traffic/revenue) matures. Set a realistic 6-12 month evaluation window from the outset.</p></div></div>
+</div>
+
+<div class="qa" data-tags="content">
+<button class="qa__q">35. What is content refresh and why is it often the highest-ROI SEO activity?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Updating an already-ranking article with new data, expanded sections, and fixed links — it frequently produces faster ranking gains than new content because the page already carries accumulated authority and indexing history.</p></div></div>
+</div>
+
+<div class="qa" data-tags="content">
+<button class="qa__q">36. What's the AIDA copywriting framework?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Attention (stop the scroll), Interest (make the problem feel relevant), Desire (proof/benefit that makes the solution necessary), Action (one clear next step). It structures most landing pages and ads.</p></div></div>
+</div>
+
+<div class="qa" data-tags="content">
+<button class="qa__q">37. What's the single most important metric for YouTube algorithm performance, and why?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Audience retention (average percentage of the video watched) — it's YouTube's strongest proxy for whether content is actually satisfying, and directly predicts how far the algorithm will recommend a video beyond existing subscribers.</p></div></div>
+</div>
+
+<div class="qa" data-tags="content">
+<button class="qa__q">38. How would you repurpose one piece of long-form content into a full content system?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Record/write one long-form asset (video or pillar article), pull short clips or quotes for social, transcribe/adapt into a blog post for SEO, and extract highlights for an email newsletter — maximizing output from one core research/creation effort.</p></div></div>
+</div>
+
+<h2>Social Media</h2>
+
+<div class="qa" data-tags="social">
+<button class="qa__q">39. A brand has 100K followers but almost no engagement. What would you investigate?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Follower quality (bots/bought followers, off-brand viral spikes), content-audience mismatch, posting consistency, and whether CTAs actually invite interaction. Also check if engagement is measured against total followers vs. actual reach, which is usually a fraction of followers.</p></div></div>
+</div>
+
+<div class="qa" data-tags="social">
+<button class="qa__q">40. What signals do most social algorithms weigh when deciding organic reach?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Early engagement velocity, dwell/watch time, relationship signals (does this user already interact with the account), format preference (platforms push formats they're promoting, e.g. Reels), and negative signals like quick scroll-past or reports.</p></div></div>
+</div>
+
+<div class="qa" data-tags="social">
+<button class="qa__q">41. How would you evaluate an influencer partnership's success if the product isn't sold directly online?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Shift to brand metrics: branded search volume before/after, unique in-store promo codes, post-purchase customer surveys on discovery source, and engagement quality/sentiment in comments rather than direct-response clicks alone.</p></div></div>
+</div>
+
+<div class="qa" data-tags="social">
+<button class="qa__q">42. What's the difference between organic and paid social strategy, and how should they work together?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Organic builds community/brand voice at declining native reach; paid buys guaranteed reach and precise targeting. A modern approach treats organic as the content/testing layer and boosts top-performing organic posts with paid spend for scale ("dark posts").</p></div></div>
+</div>
+
+<div class="qa" data-tags="social">
+<button class="qa__q">43. Why might a nano/micro-influencer campaign outperform a single macro-influencer post at similar cost?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Distributing budget across many well-matched smaller creators typically yields higher aggregate engagement rate, more authentic-feeling content variety, and audiences that trust the individual recommendation more than a mega-influencer's broader, less personal reach.</p></div></div>
+</div>
+
+<div class="qa" data-tags="social">
+<button class="qa__q">44. How do you build a social media content calendar from scratch for a brand with zero existing data?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Start with persona research and competitor content audits to identify formats/pillars that perform in the niche, define 3-5 content pillars tied to funnel stages, set a sustainable cadence, and build in a review cycle to swap underperforming pillars once real data arrives.</p></div></div>
+</div>
+
+<h2>Email Marketing</h2>
+
+<div class="qa" data-tags="email">
+<button class="qa__q">45. Open rates dropped sharply after Apple's Mail Privacy Protection rollout. How do you adjust measurement?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Open rate became unreliable as Apple began pre-fetching images for privacy, artificially inflating opens. Shift primary optimization to click-through rate and downstream conversions, treating open rate as directional only.</p></div></div>
+</div>
+
+<div class="qa" data-tags="email">
+<button class="qa__q">46. Would you rather have a list of 50,000 unengaged subscribers or 5,000 highly engaged ones?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>5,000 engaged — list quality drives deliverability (inbox providers use engagement signals to route future sends) and revenue per send. A large disengaged list hurts deliverability for the whole list while inflating a vanity metric.</p></div></div>
+</div>
+
+<div class="qa" data-tags="email">
+<button class="qa__q">47. What are SPF, DKIM, and DMARC, and why do they matter?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>DNS records that authenticate your domain as a legitimate sender. Without them, deliverability suffers as inbox providers can't verify sender identity, increasing the chance of spam-folder placement — foundational, not optional, infrastructure for any serious email program.</p></div></div>
+</div>
+
+<div class="qa" data-tags="email">
+<button class="qa__q">48. Design a lead-scoring model with no historical conversion data yet.</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Start with qualitative, common-sense weighting (firmographic fit + high-intent behaviors like pricing-page visits), launch it, then retrain the weights once enough closed-won/closed-lost data exists to confirm which signals actually correlated with real conversions.</p></div></div>
+</div>
+
+<div class="qa" data-tags="email">
+<button class="qa__q">49. What's the difference between marketing automation and a CRM?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Automation decides what message to send when, nurturing leads at scale (owned by marketing). A CRM tracks where each specific person/deal stands in a sales pipeline (owned by sales). Modern platforms often blur the line but conceptually serve different jobs.</p></div></div>
+</div>
+
+<div class="qa" data-tags="email">
+<button class="qa__q">50. How would you structure a welcome email sequence for a new SaaS signup?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Day 0: set expectations and confirm value. Day 2-3: deliver an early quick win. Day 5-7: social proof/case study. Day 8-10: soft upgrade/upsell CTA. Day 14: address common objections via FAQ — each email earning the right to the next by delivering value first.</p></div></div>
+</div>
+
+<h2>Analytics & Data</h2>
+
+<div class="qa" data-tags="analytics">
+<button class="qa__q">51. What's the fundamental difference between GA4 and old Universal Analytics?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Universal Analytics was built around sessions/pageviews as first-class concepts. GA4 is event-based — everything, including a pageview, is an event with parameters. This is more flexible for app+web and cross-device tracking, but requires deliberately defining meaningful events/conversions.</p></div></div>
+</div>
+
+<div class="qa" data-tags="analytics">
+<button class="qa__q">52. A test shows a 15% lift after only 3 days with 200 visitors per variant. Do you ship it?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>No — that sample is very likely too small and too short to reach statistical significance or account for day-of-week variance. Recommend running to a pre-calculated sample size across at least one full week (ideally two) before deciding, to avoid shipping a false positive.</p></div></div>
+</div>
+
+<div class="qa" data-tags="analytics">
+<button class="qa__q">53. Why might Google Analytics and Facebook Ads Manager show different conversion numbers for the same campaign?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Different attribution windows, different tracking mechanisms (pixel vs. UTM+GA4 events), cross-device tracking gaps, and ad blockers/privacy settings affecting each platform differently. Neither number is "wrong" — they're measuring under different rules.</p></div></div>
+</div>
+
+<div class="qa" data-tags="analytics">
+<button class="qa__q">54. An LTV:CAC ratio comes back at 8:1. Is that good?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>It looks excellent on the surface, but an unusually high ratio is often a sign of under-investment — the company could likely spend more on acquisition (accepting a lower but still healthy ratio) and grow faster while staying profitable. The right answer weighs growth capital and market size, not just the raw number.</p></div></div>
+</div>
+
+<div class="qa" data-tags="analytics">
+<button class="qa__q">55. What's the difference between last-click and multi-touch attribution?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Last-click gives 100% credit to the final touchpoint before conversion, ignoring everything that built awareness/consideration earlier. Multi-touch models (linear, time-decay, data-driven) distribute credit across the journey, giving a more accurate view of assist channels like top-of-funnel content.</p></div></div>
+</div>
+
+<div class="qa" data-tags="analytics">
+<button class="qa__q">56. Walk through how you'd diagnose a sudden 40% drop in organic traffic.</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Check for a tracking/tagging issue first (often the actual cause), then check Search Console for manual actions or indexing drops, check for a recent Google algorithm update around the drop date, check for accidental technical changes (robots.txt, noindex tags, site migration), and check if it's seasonal versus genuine.</p></div></div>
+</div>
+
+<div class="qa" data-tags="analytics">
+<button class="qa__q">57. What is the ICE framework and how is it used?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Impact, Confidence, Ease — a scoring framework (typically 1-10 each) used to prioritize a CRO/experimentation backlog objectively, so teams test the highest-value hypotheses first instead of whatever a stakeholder liked most recently.</p></div></div>
+</div>
+
+<h2>General & Behavioral</h2>
+
+<div class="qa" data-tags="general">
+<button class="qa__q">58. Tell me about a campaign that failed. What did you learn?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Interviewers want a real example with a specific, honest diagnosis (not "budget was too small") and a concrete change made afterward. Structure with STAR (Situation, Task, Action, Result) and end on the actionable lesson, showing the failure improved your process.</p></div></div>
+</div>
+
+<div class="qa" data-tags="general">
+<button class="qa__q">59. How do you stay current in a field that changes as fast as digital marketing?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Name specific, credible sources (platform official blogs/changelogs, a handful of trusted newsletters, hands-on testing in your own accounts) rather than a vague "I read a lot." Testing changes yourself, not just reading about them, is the strongest signal.</p></div></div>
+</div>
+
+<div class="qa" data-tags="general">
+<button class="qa__q">60. How would you explain a complex marketing concept, like attribution modeling, to a non-marketing stakeholder?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Use a concrete analogy and avoid jargon — e.g., "if three people helped you find a restaurant (a friend's recommendation, a review site, and a map app), who gets credit for the visit? Attribution models are different rules for splitting that credit." Then tie it back to a real budget decision it affects.</p></div></div>
+</div>
+
+<div class="qa" data-tags="general">
+<button class="qa__q">61. What marketing metric do you think is most overrated, and why?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>A strong answer names a genuinely common vanity metric (raw follower count, impressions, "likes") and explains specifically why it doesn't correlate reliably with business outcomes, then names the more actionable metric that should replace it in decision-making.</p></div></div>
+</div>
+
+<div class="qa" data-tags="general">
+<button class="qa__q">62. How do you prioritize when marketing, sales, and product teams want conflicting things from a campaign?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Anchor the conversation back to the shared business goal and agreed KPI, present data-backed tradeoffs rather than opinions, and propose a small test to resolve disagreement with evidence rather than escalation where possible.</p></div></div>
+</div>
+
+<div class="qa" data-tags="general">
+<button class="qa__q">63. Describe your process for onboarding onto a brand-new industry/product you've never marketed before.</button>
+<div class="qa__a"><div class="qa__a-inner"><p>A strong answer describes concrete first steps: competitor and SERP research, customer interviews or support ticket review, auditing existing analytics for baseline performance, and identifying the 1-2 highest-leverage quick wins before proposing a longer-term plan.</p></div></div>
+</div>
+
+<div class="qa" data-tags="general,foundations">
+<button class="qa__q">64. What's your favorite digital marketing campaign you've seen recently, and why did it work?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Interviewers are testing genuine industry engagement and analytical thinking. A strong answer names a specific campaign, identifies which funnel stage/persona it targeted, and explains the specific mechanic (a hook, an incentive structure, a distribution trick) that made it effective — not just "it was creative."</p></div></div>
+</div>
+
+<div class="qa" data-tags="general">
+<button class="qa__q">65. How comfortable are you with basic HTML/CSS, and why does it help a marketer?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Basic HTML/CSS literacy lets a marketer make small landing page edits without waiting on developers, understand technical SEO conversations, debug tracking pixel placement issues, and communicate more precisely with engineering teams. You don't need to be a developer — just fluent enough to read and lightly edit code.</p></div></div>
+</div>
+
+<h2>Tools & AI</h2>
+
+<div class="qa" data-tags="analytics,general">
+<button class="qa__q">66. What tools have you used, and how do you decide when a paid tool is worth it over a free alternative?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>A strong answer ties tool choice to a specific limitation hit with the free option (e.g. "Search Console only shows my own site's data; I needed Ahrefs for competitor backlink gap analysis") rather than just listing tool names.</p></div></div>
+</div>
+
+<div class="qa" data-tags="general">
+<button class="qa__q">67. How has AI changed your approach to content marketing?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Avoid both extremes ("AI writes everything" or "I don't use it"). Frame it as a workflow shift: AI accelerates research and first drafts, freeing more time for strategy, original insight, and the fact-checking/editing that actually determines content quality and trust.</p></div></div>
+</div>
+
+<div class="qa" data-tags="general">
+<button class="qa__q">68. What's Generative Engine Optimization (GEO) and how does it differ from traditional SEO?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>GEO optimizes content to be clearly extractable and citable by AI answer engines and chat interfaces — direct, self-contained answers, strong structured data, and clear citations — layered on top of, not replacing, traditional SEO fundamentals like technical health and E-E-A-T.</p></div></div>
+</div>
+
+<div class="qa" data-tags="ppc,seo">
+<button class="qa__q">69. How would you build 10 quality backlinks for a new SaaS product with zero existing authority?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Create one genuinely useful free tool or original data study, pitch it to niche newsletters/blogs, get listed on relevant SaaS/startup directories, guest post on 2-3 adjacent-niche blogs, and respond to journalist source requests (e.g. HARO) in the space.</p></div></div>
+</div>
+
+<div class="qa" data-tags="foundations,analytics">
+<button class="qa__q">70. Cart abandonment is at 75%. Walk me through how you'd reduce it.</button>
+<div class="qa__a"><div class="qa__a-inner"><p>75% is near industry average, so benchmark against the specific vertical first rather than assuming crisis. Diagnose with session recordings/checkout funnel analytics to find the exact drop-off step, fix the top friction point (often shipping cost surprise or forced account creation), then layer in an abandoned-cart email sequence as a safety net.</p></div></div>
+</div>
+
+<div class="qa" data-tags="general,analytics">
+<button class="qa__q">71. How do you communicate a disappointing campaign result to a non-technical stakeholder?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Lead with the business-relevant number, not raw metrics jargon, explain the most likely cause in plain language, and immediately follow with the specific next step/test planned — stakeholders react far better to "here's what we're doing about it" than to a bare bad number.</p></div></div>
+</div>
+
+<div class="qa" data-tags="analytics,general">
+<button class="qa__q">72. What's a vanity metric, and can you give an example from a channel you've worked with?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>A metric that looks impressive but doesn't reliably predict business outcomes or suggest a next action — e.g. total impressions on a brand awareness ad with no corresponding lift in branded search or conversions. The actionable counterpart is usually a rate or ratio (CTR, conversion rate) tied to an outcome.</p></div></div>
+</div>
+
+<div class="qa" data-tags="foundations,content">
+<button class="qa__q">73. How do you balance SEO requirements with genuinely good writing?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Write for the reader first, then structure for search engines second — a clear, well-organized answer to a real question naturally satisfies most on-page SEO needs (headers, keyword relevance) without keyword-stuffing. If SEO best practice and reader value ever conflict, side with the reader; Google's own guidance increasingly rewards genuinely useful content over mechanically "optimized" content.</p></div></div>
+</div>
+
+<div class="qa" data-tags="ppc,analytics">
+<button class="qa__q">74. What's the difference between CPA and CAC?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>CPA (Cost Per Acquisition) is usually channel/campaign-specific — total spend on that channel divided by conversions from it. CAC (Customer Acquisition Cost) is typically a fully-loaded, company-wide figure including all sales and marketing costs divided by new customers, used for overall business unit economics.</p></div></div>
+</div>
+
+<div class="qa" data-tags="social,ppc">
+<button class="qa__q">75. Why is frequency capping important in a retargeting campaign?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Uncapped retargeting quickly turns into ad fatigue and annoyance, actively damaging brand perception instead of nudging a conversion. Frequency capping limits how often one person sees the same ad in a period, protecting both budget efficiency and brand sentiment.</p></div></div>
+</div>
+
+<div class="qa" data-tags="email,analytics">
+<button class="qa__q">76. How would you A/B test a subject line properly, statistically speaking?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Split a representative sample randomly between variants, change only the subject line (isolate one variable), send simultaneously to control for time-of-day effects, and wait for a statistically meaningful sample before declaring a winner — most ESPs have this built in, but understanding the underlying logic matters in an interview.</p></div></div>
+</div>
+
+<div class="qa" data-tags="content,seo">
+<button class="qa__q">77. What's topical authority, and how do you build it deliberately?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>The degree to which search engines (and readers) trust a site as a comprehensive, credible source on a subject. Built deliberately through the pillar/cluster content model, consistent publishing in a focused niche rather than scattershot topics, and earning citations/backlinks from other authoritative sources in that niche.</p></div></div>
+</div>
+
+<div class="qa" data-tags="foundations,social">
+<button class="qa__q">78. How would you respond to a viral negative comment or PR situation on social media?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Acknowledge quickly and publicly without being defensive, take detailed problem-solving offline (DM/email), avoid deleting comments unless they violate clear policy (deletion often escalates backlash), and follow a pre-agreed escalation protocol involving legal/leadership for serious situations.</p></div></div>
+</div>
+
+<div class="qa" data-tags="foundations,ppc">
+<button class="qa__q">79. If you had to cut a marketing budget by 30% overnight, how would you decide what to cut?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>Cut from the lowest-ROI, least-attributable channels first (upper-funnel awareness spend with weak measurement) before touching channels with clear, direct attribution to revenue (high-performing retargeting, branded search). Protect anything currently mid-test with promising early data rather than killing it prematurely.</p></div></div>
+</div>
+
+<div class="qa" data-tags="general,foundations">
+<button class="qa__q">80. Where do you see digital marketing heading in the next few years?</button>
+<div class="qa__a"><div class="qa__a-inner"><p>A strong answer names concrete, defensible trends rather than buzzwords — the shift toward AI-assisted content workflows and GEO/AI search optimization, first-party data strategies replacing third-party cookies, and increasing channel fragmentation requiring tighter cross-channel measurement — and ties each to a real skill you're building.</p></div></div>
+</div>
+
+
+      <div class="page-nav"><a href="../glossary/index.html"><span class="page-nav__label">&larr; Previous</span>Glossary (A–Z)</a><a href="../projects/index.html" class="page-nav__next"><span class="page-nav__label">Next &rarr;</span>Practical Projects</a></div>
+    </div>
+  </main>
+</div>
+
+<footer class="footer">
+  digitalmarketing.ai — a free, open-source, practical digital marketing reference. MIT Licensed. Built for learners, by learners.
+</footer>
+
+<script>window.SITE_INDEX = [{"title":"What Is Digital Marketing?","category":"Foundations","url":"../pages/foundations/what-is-digital-marketing.html"},{"title":"The Funnel & Customer Journey","category":"Foundations","url":"../pages/foundations/marketing-funnel-customer-journey.html"},{"title":"Buyer Personas & Research","category":"Foundations","url":"../pages/foundations/buyer-personas-market-research.html"},{"title":"Strategy, Goals & KPIs","category":"Foundations","url":"../pages/foundations/strategy-goals-kpis.html"},{"title":"SEO Fundamentals","category":"SEO","url":"../pages/seo/seo-fundamentals.html"},{"title":"Keyword Research","category":"SEO","url":"../pages/seo/keyword-research.html"},{"title":"On-Page SEO","category":"SEO","url":"../pages/seo/on-page-seo.html"},{"title":"Technical SEO","category":"SEO","url":"../pages/seo/technical-seo.html"},{"title":"Off-Page SEO & Link Building","category":"SEO","url":"../pages/seo/off-page-seo-link-building.html"},{"title":"Local SEO","category":"SEO","url":"../pages/seo/local-seo.html"},{"title":"PPC & Google Ads Fundamentals","category":"SEM & Paid Ads","url":"../pages/sem-ppc/ppc-google-ads-fundamentals.html"},{"title":"Ad Copy & Landing Pages","category":"SEM & Paid Ads","url":"../pages/sem-ppc/ad-copywriting-landing-pages.html"},{"title":"Social Media Advertising","category":"SEM & Paid Ads","url":"../pages/sem-ppc/social-media-advertising.html"},{"title":"Retargeting & Programmatic","category":"SEM & Paid Ads","url":"../pages/sem-ppc/retargeting-programmatic.html"},{"title":"Content Strategy","category":"Content Marketing","url":"../pages/content/content-strategy.html"},{"title":"Copywriting Fundamentals","category":"Content Marketing","url":"../pages/content/copywriting-fundamentals.html"},{"title":"Blogging & SEO Content","category":"Content Marketing","url":"../pages/content/blogging-seo-content.html"},{"title":"Video & YouTube Marketing","category":"Content Marketing","url":"../pages/content/video-youtube-marketing.html"},{"title":"Social Media Fundamentals","category":"Social Media","url":"../pages/social/social-media-fundamentals.html"},{"title":"Strategy & Content Calendar","category":"Social Media","url":"../pages/social/social-media-strategy-calendar.html"},{"title":"Influencer Marketing","category":"Social Media","url":"../pages/social/influencer-marketing.html"},{"title":"Email Marketing Fundamentals","category":"Email & Automation","url":"../pages/email-automation/email-marketing-fundamentals.html"},{"title":"List Building & Lead Magnets","category":"Email & Automation","url":"../pages/email-automation/list-building-lead-magnets.html"},{"title":"Marketing Automation & CRM","category":"Email & Automation","url":"../pages/email-automation/marketing-automation-crm.html"},{"title":"Web Analytics & GA4","category":"Analytics & Data","url":"../pages/analytics/web-analytics-ga4.html"},{"title":"CRO & A/B Testing","category":"Analytics & Data","url":"../pages/analytics/conversion-rate-optimization.html"},{"title":"Marketing Metrics & Formulas","category":"Analytics & Data","url":"../pages/analytics/marketing-metrics-kpis.html"},{"title":"UTM Tracking & Attribution","category":"Analytics & Data","url":"../pages/analytics/utm-tracking-attribution.html"},{"title":"Affiliate Marketing","category":"E-commerce & Affiliate","url":"../pages/ecommerce-affiliate/affiliate-marketing.html"},{"title":"E-commerce Marketing","category":"E-commerce & Affiliate","url":"../pages/ecommerce-affiliate/ecommerce-marketing.html"},{"title":"Marketing Tools & Tech Stack","category":"Tools & AI","url":"../pages/tools-ai/marketing-tools-tech-stack.html"},{"title":"AI in Digital Marketing","category":"Tools & AI","url":"../pages/tools-ai/ai-in-digital-marketing.html"},{"title":"Glossary (A–Z)","category":"Reference","url":"../glossary/index.html"},{"title":"Interview Questions Hub","category":"Reference","url":"../interview-questions/index.html"},{"title":"Practical Projects","category":"Reference","url":"../projects/index.html"}];</script>
+<script src="../js/main.js"></script>
+</body>
+</html>
